@@ -72,38 +72,39 @@
         </div>
 
         <!-- Category Filters -->
-        <div class="flex justify-center space-x-3 mb-6">
-            <button class="category-btn bg-[#9994f0] text-white px-4 py-2 rounded-full" data-category="all"><a
-                    href="">All</a></button>
-            <button class="category-btn bg-[#9994f0] text-white px-4 py-2 rounded-full" data-category="posters"><a
-                    href="#posters-section">Posters</a></button>
-            <button class="category-btn bg-[#9994f0] text-white px-4 py-2 rounded-full" data-category="banners"><a
-                    href="#banners-section">Banners</a></button>
-            <button class="category-btn bg-[#9994f0] text-white px-4 py-2 rounded-full" data-category="flyers"><a
-                    href="#digital-art-section">Digital
-                    Art</a></button>
-            <!-- More Button with Dropdown -->
-            <div class="relative">
-                <button id="more-btn" class="bg-[#9994f0] text-white px-4 py-2 rounded-full flex items-center">
-                    More <i class="fa-solid fa-circle-chevron-down ml-2"></i>
-                </button>
-                <div id="dropdown-menu" class="absolute bg-[#9994f0] text-white rounded-lg shadow-lg mt-2 hidden w-40">
-                    <button class="dropdown-item w-full text-left px-4 py-2 hover:bg-[#9994f0]"
-                        data-category="products"><a href="#products-section">Products</a></button>
-                    <button class="dropdown-item w-full text-left px-4 py-2 hover:bg-[#9994f0]"
-                        data-category="manipulations"><a href="#manipulations-section">Manipulations</a></button>
-                    <button class="dropdown-item w-full text-left px-4 py-2 hover:bg-[#9994f0]"
-                        data-category="retouches"><a href="#retouches-section">Retouches</a></button>
-                    <button class="dropdown-item w-full text-left px-4 py-2 hover:bg-[#9994f0]"
-                        data-category="brochures"><a href="#brochures-section">Brochures</a></button>
-                    <button class="dropdown-item w-full text-left px-4 py-2 hover:bg-[#9994f0]"
-                        data-category="logos"><a href="#logos-section">Logos</a></button>
-                    <button class="dropdown-item w-full text-left px-4 py-2 hover:bg-[#9994f0]"
-                        data-category="business-cards"><a href="#others-section">others</a></button>
+<div class="flex flex-wrap justify-center space-x-2 gap-2 sm:space-x-3 mb-6">
+    <button class="category-btn bg-[#9994f0] text-white px-3 sm:px-4 py-1 sm:py-2 text-sm sm:text-base rounded-full"
+        data-category="all"><a href="">All</a></button>
+    <button class="category-btn bg-[#9994f0] text-white px-3 sm:px-4 py-1 sm:py-2 text-sm sm:text-base rounded-full"
+        data-category="posters"><a href="#posters-section">Posters</a></button>
+    <button class="category-btn bg-[#9994f0] text-white px-3 sm:px-4 py-1 sm:py-2 text-sm sm:text-base rounded-full"
+        data-category="banners"><a href="#banners-section">Banners</a></button>
+    <button class="category-btn bg-[#9994f0] text-white px-3 sm:px-4 py-1 sm:py-2 text-sm sm:text-base rounded-full"
+        data-category="flyers"><a href="#digital-art-section">Digital Art</a></button>
 
-                </div>
-            </div>
+    <!-- More Button with Dropdown -->
+    <div class="relative">
+        <button id="more-btn"
+            class="bg-[#9994f0] text-white px-3 sm:px-4 py-1 sm:py-2 text-sm sm:text-base rounded-full flex items-center">
+            More <i class="fa-solid fa-circle-chevron-down ml-2"></i>
+        </button>
+        <div id="dropdown-menu" class="absolute bg-[#9994f0] text-white rounded-lg shadow-lg mt-2 hidden w-40">
+            <button class="dropdown-item w-full text-left px-4 py-2 hover:bg-[#9994f0]"
+                data-category="products"><a href="#products-section">Products</a></button>
+            <button class="dropdown-item w-full text-left px-4 py-2 hover:bg-[#9994f0]"
+                data-category="manipulations"><a href="#manipulations-section">Manipulations</a></button>
+            <button class="dropdown-item w-full text-left px-4 py-2 hover:bg-[#9994f0]"
+                data-category="retouches"><a href="#retouches-section">Retouches</a></button>
+            <button class="dropdown-item w-full text-left px-4 py-2 hover:bg-[#9994f0]"
+                data-category="brochures"><a href="#brochures-section">Brochures</a></button>
+            <button class="dropdown-item w-full text-left px-4 py-2 hover:bg-[#9994f0]"
+                data-category="logos"><a href="#logos-section">Logos</a></button>
+            <button class="dropdown-item w-full text-left px-4 py-2 hover:bg-[#9994f0]"
+                data-category="business-cards"><a href="#others-section">Others</a></button>
         </div>
+    </div>
+</div>
+
 
         <!-- Posters Section -->
         <div id="posters-section" class="mb-10">
@@ -709,23 +710,6 @@
 
         });
     </script>
-
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const currentPage = window.location.pathname;
-            const navLinks = document.querySelectorAll(".nav-link");
-
-            navLinks.forEach(link => {
-                if (currentPage.includes(link.getAttribute("href").split('/')[0])) {
-                    link.classList.add("active");  // Add 'active' class
-                } else {
-                    link.classList.remove("active");  // Remove 'active' class
-                }
-            });
-        });
-    </script>
-
 
 
     <!-- link to custom js  -->
