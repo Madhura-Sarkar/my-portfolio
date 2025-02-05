@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- link to custom stylesheet  -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- font awesome css  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Tailwind CSS CDN (Updated to v3 for better support) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#111827ff] h-screen">
+
+<!-- Navbar Section -->
+<header class="p-4 text-white fixed top-0 left-0 w-full z-10 bg-[#081124]">
+    <nav class="py-1 px-2 sm:px-6 md:px-8 lg:px-12">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Centered Navbar for Larger Screens -->
+            <ul class="hidden md:flex justify-center space-x-12 text-brown-900 font-bold w-full">
+                <li class="active" aria-current="page"><a href="#home" class="nav-link">Home</a>
+                </li>
+                <li><a href="#about" class="nav-link hover:text-[#ffffff] transition">About</a></li>
+                <li><a href="projects.html" class="nav-link hover:text-[#ffffff] transition">Projects</a></li>
+                <li><a href="#contact" class="nav-link hover:text-[#ffffff] transition">Contact</a></li>
+            </ul>
+
+            <!-- Hamburger Menu for Small Screens (Right Aligned) -->
+            <button class="block md:hidden text-brown-900 ml-auto" id="menu-toggle">
+                <i class="fas fa-bars fa-lg"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <ul id="mobile-menu" class="md:hidden hidden mt-4 space-y-2 text-center text-brown-900 font-semibold">
+            <li class="active" aria-current="page">
+                <a href="#home" class="nav-link transition">Home</a>
+            </li>
+            <li>
+                <a href="#about" class="nav-link transition">About</a>
+            </li>
+            <li>
+                <a href="projects.html" class="nav-link transition">Projects</a>
+            </li>
+            <li>
+                <a href="#contact" class="nav-link transition">Contact</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+    <!-- Hero Section with Vertical Centering -->
+    <div class="hero-section flex flex-col md:flex-row items-center justify-center h-[calc(100vh-64px)]" id="home">
+        <div class="text-center relative md:mr-20 mb-4 mt-20 md:mb-0">
+            <!-- Bars Layout Matching the Image -->
+            <div class="space-y-2 mb-4">
+                <div class="h-2 w-24 sm:w-32 md:w-48 lg:w-56 bg-blue-400 animate-bar rounded"></div>
+                <div class="h-2 w-12 sm:w-16 md:w-32 lg:w-40 bg-gray-400 animate-bar rounded"></div>
+                <div class="h-2 w-32 sm:w-40 md:w-56 lg:w-64 bg-purple-400 animate-bar rounded"></div>
+                <div class="flex space-x-2">
+                    <div class="h-2 w-12 sm:w-16 md:w-24 lg:w-28 bg-pink-400 animate-bar rounded"></div>
+                    <div class="h-2 w-16 sm:w-20 md:w-28 lg:w-32 bg-green-400 animate-bar rounded"></div>
+                    <div class="h-2 w-8 sm:w-12 md:w-16 lg:w-24 bg-blue-300 animate-bar rounded"></div>
+                </div>
+                <div class="h-2 w-24 sm:w-28 md:w-40 lg:w-48 bg-yellow-400 animate-bar rounded"></div>
+            </div>
+
+            <!-- Text -->
+            <h1 class="text-white text-left text-2xl sm:text-3xl md:text-4xl font-bold">Madhura Sarkar</h1>
+            <p class="text-gray-300 text-left text-sm sm:text-lg md:text-xl mt-2">Graphic Designer | Frontend Developer
+                | UX/UI</p>
+
+            <!-- Bottom Bars -->
+            <div class="space-y-2 mt-4">
+                <div class="h-2 w-32 sm:w-36 md:w-52 lg:w-56 bg-green-400 animate-bar rounded"></div>
+                <div class="h-2 w-20 sm:w-28 md:w-40 lg:w-48 bg-purple-400 animate-bar rounded"></div>
+                <div class="flex space-x-2">
+                    <div class="h-2 w-16 sm:w-20 md:w-28 lg:w-32 bg-blue-400 animate-bar rounded"></div>
+                    <div class="h-2 w-24 sm:w-32 md:w-40 lg:w-44 bg-pink-400 animate-bar rounded"></div>
+                    <div class="h-2 w-20 sm:w-24 md:w-32 lg:w-36 bg-gray-400 animate-bar rounded"></div>
+                </div>
+                <div class="h-2 w-24 sm:w-28 md:w-40 lg:w-48 bg-yellow-400 animate-bar rounded"></div>
+            </div>
+        </div>
+
+        <!-- Image Frame -->
+        <div class="w-32 sm:w-40 md:w-64 lg:w-80 h-32 sm:h-40 md:h-64 lg:h-72 mb-8 md:mb-0">
+            <img class="image" src="assets/port img.png" alt="Portfolio Image">
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="features">
+        <div class="container mx-auto flex flex-col items-center justify-center px-4 py-10">
+            <h2 class="text-white text-3xl font-bold mb-8 text-center">✦ My Services ✦</h2>
+
+            <!-- Left Scrolling Wrapper -->
+            <div class="relative overflow-hidden w-11/12 max-w-screen-lg h-10 mask-effect mb-6">
+                <!-- Added mb-6 for gap -->
+                <div class="absolute flex whitespace-nowrap animate-scrollLeft">
+                    <div class="flex space-x-4">
+                        <div
+                            class="w-28 h-10 bg-white/10 border-r border-b border-white rounded-[6px] flex items-center justify-center text-white text-xs">
+                            Poster Design
+                        </div>
+                        <div
+                            class="w-28 h-10 bg-white/10 border-r border-b border-white rounded-[6px] flex items-center justify-center text-white text-xs">
+                            Logo Design
+                        </div>
+                        <div
+                            class="w-28 h-10 bg-white/10 border-r border-b border-white rounded-[6px] flex items-center justify-center text-white text-xs">
+                            Brand Identity
+                        </div>
+                        <div
+                            class="w-28 h-10 bg-white/10 border-r border-b border-white rounded-[6px] flex items-center justify-center text-white text-xs">
+                            Social Media
+                        </div>
+                        <div
+                            class="w-28 h-10 bg-white/10 border-r border-b border-white rounded-[6px] flex items-center justify-center text-white text-xs">
+                            Website UI/UX
+                        </div>
+                        <div
+                            class="w-28 h-10 bg-white/10 border-r border-b border-white rounded-[6px] flex items-center justify-center text-white text-xs">
+                            Print Design
+                        </div>
+                        <div
+                            class="w-28 h-10 bg-white/10 border-r border-b border-white rounded-[6px] flex items-center justify-center text-white text-xs">
+                            Packaging Design
+                        </div>
+                        <div
+                            class="w-28 h-10 bg-white/10 border-r border-b border-white rounded-[6px] flex items-center justify-center text-white text-xs">
+                            Gaming & Esports
+                        </div>
+                        <div
+                            class="w-28 h-10 bg-white/10 border-r border-b border-white rounded-[6px] flex items-center justify-center text-white text-xs">
+                            Illustration
+                        </div>
+                        <div
+                            class="w-28 h-10 bg-white/10 border-r border-b border-white rounded-[6px] flex items-center justify-center text-white text-xs">
+                            Digital Art
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Scrolling Wrapper -->
+            <div class="relative overflow-hidden w-11/12 max-w-screen-lg h-10 mask-effect">
+                <div class="absolute flex whitespace-nowrap animate-scrollRight">
+                    <div class="flex space-x-4">
+                        <div
+                            class="w-28 h-10 bg-white/10 border-r border-b border-white rounded-[6px] flex items-center justify-center text-white text-xs">
+                            HTML
+                        </div>
+                        <div
+                            class="w-28 h-10 bg-white/10 border-r border-b border-white rounded-[6px] flex items-center justify-center text-white text-xs">
+                            CSS
+                        </div>
+                        <div
+                            class="w-28 h-10 bg-white/10 border-r border-b border-white rounded-[6px] flex items-center justify-center text-white text-xs">
+                            JavaScript
+                        </div>
+                        <div
+                            class="w-28 h-10 bg-white/10 border-r border-b border-white rounded-[6px] flex items-center justify-center text-white text-xs">
+                            Tailwind
+                        </div>
+                        <div
+                            class="w-28 h-10 bg-white/10 border-r border-b border-white rounded-[6px] flex items-center justify-center text-white text-xs">
+                            Bootstrap
+                        </div>
+                        <div
+                            class="w-28 h-10 bg-white/10 border-r border-b border-white rounded-[6px] flex items-center justify-center text-white text-xs">
+                            coming soon...
+                        </div>
+                        <div
+                            class="w-28 h-10 bg-white/10 border-r border-b border-white rounded-[6px] flex items-center justify-center text-white text-xs">
+                            Python
+                        </div>
+                        <div
+                            class="w-28 h-10 bg-white/10 border-r border-b border-white rounded-[6px] flex items-center justify-center text-white text-xs">
+                            coming soon...
+                        </div>
+                        <div
+                            class="w-28 h-10 bg-white/10 border-r border-b border-white rounded-[6px] flex items-center justify-center text-white text-xs">
+                            Figma
+                        </div>
+                        <div
+                            class="w-28 h-10 bg-white/10 border-r border-b border-white rounded-[6px] flex items-center justify-center text-white text-xs">
+                            Coming soon...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- about section -->
+    <div class="about" id="about">
+
+        <hr class="mt-10">
+
+        <div class="container mx-auto flex flex-col items-center justify-center px-4 py-10 mt-10">
+            <div class="flex flex-col items-center justify-center">
+                <div class="img-container"> <img src="assets/hello.png" alt="Hello" class="h-50 w-60"></div>
+                <div class="p-8 rounded-lg shadow-lg max-w-full">
+                    <p class="text-xl font-medium text-white text-center">I am <span class="font-bold">Madhura [Tina]
+                            Designer & Developer </span></p>
+                    <div id="typewriter" class="text-white mt-4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- apptitudes -->
+    <div class="text-center">
+        <h1 class="text-2xl font-bold tracking-widest text-white flex items-center justify-center space-x-2">
+            <span class="text-2xl text-white">✦</span>
+            <span class="font-serif">APTITUDES</span>
+        </h1>
+        <div class="flex flex-wrap gap-6 justify-center mt-6">
+            <span class="skill">Adobe Photoshop</span>
+            <span class="skill">Adobe Illustrator</span>
+            <span class="skill">Adobe In-Design</span>
+            <span class="skill">ADOBE SUITE</span>
+            <span class="skill">FIGMA</span>
+            <span class="skill">CANVA</span>
+        </div>
+    </div>
+
+    <!-- background  -->
+    <div class="max-w-4xl w-full px-6 py-20 flex flex-col lg:flex-row items-center justify-between mx-auto">
+        <!-- Left Section (Heading) -->
+        <div class="w-full lg:w-1/2 pr-16 flex flex-col items-start space-y-6 lg:space-y-0">
+            <h1 class="text-5xl text-white font-['Orbitron'] font-medium leading-tight mb-10">Academic Highlights &
+                Works</h1>
+
+            <div class="mt-10 space-y-8">
+                <!-- First Group of Buttons -->
+                <div class="flex space-x-6">
+                    <button type="button" class="button">
+                        <div class="button-top"><a href="projects.html">Graphic Design</a></div>
+                        <div class="button-bottom"></div>
+                        <div class="button-base"></div>
+                    </button>
+                    <button type="button" class="button">
+                        <div class="button-top"><a href="https://www.behance.net/webstudymadhura">Web Design</a></div>
+                        <div class="button-bottom"></div>
+                        <div class="button-base"></div>
+                    </button>
+                </div>
+
+                <!-- Second Group of Buttons -->
+                <div class="flex space-x-6">
+                    <button type="button" class="button">
+                        <div class="button-top"><a href="">Pixel Art</a></div>
+                        <div class="button-bottom"></div>
+                        <div class="button-base"></div>
+                    </button>
+                    <button type="button" class="button">
+                        <div class="button-top"><a href="">UX/UI</a></div>
+                        <div class="button-bottom"></div>
+                        <div class="button-base"></div>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Section (Content) -->
+        <div class="w-full lg:w-1/2 space-y-12 mt-8 lg:mt-0">
+            <!-- Education Section -->
+            <div>
+                <h2 class="text-xl text-white font-semibold flex items-center">
+                    <span class="mr-2">✦</span> ACADEMIC QUALIFICATION
+                </h2>
+                <ul class="mt-2 text-gray-300 leading-relaxed">
+                    <li>-- BACHELOR OF COMPUTER APPLICATION NARULA INTITUTE OF TECHNOLOGY 2022 - 2025 WEST BENGAL,
+                        KOLKATA </li>
+                    <li>-- WBCHSE BAGHBAZAR MULTIPURPOSE GIRLS' SCHOOL (GOVT. SPOND.) 06/2022 WEST BENGAL, KOLKATA
+                        MARKS: 92.8%</li>
+                    <li>-- WBBSE HOLY CHILD INSTITUTE, GIRLS' HIGHER SECONDARY SCHOOL 07/2020 WEST BENGAL, KOLKATA
+                        MARKS: 76.8%</li>
+                </ul>
+            </div>
+
+            <!-- Work Experience Section -->
+            <div>
+                <h2 class="text-xl text-white font-semibold flex items-center">
+                    <span class="mr-2">✦</span> CERTIFICATES
+                </h2>
+                <ul class="mt-2 text-gray-300 leading-relaxed">
+                    <li>• Graphic Design [ Sri Sarada Math-Rasik Bhita (06/2023 - 04/2024) ]</li>
+                    <li>--> Graphic Designing including Adobe Photoshop, Illustrator,
+                        In-Design</li>
+                    <li>--> In-house extensive training with communicative skill gain.</li>
+                </ul>
+                <ul class="mt-2 text-gray-300 leading-relaxed">
+                    <li>• Web Designing [Euphoria GenX (07/2024 - 09/2024) ]</li>
+                    <li>--> Designing Websites for clients using various code
+                        languages.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="contact" id="contact">
+
+        <hr class="mt-4">
+
+        <!-- thank you section -->
+        <div class="flex items-center justify-center p-4 mt-20">
+            <div class="text-center p-6 shadow-lg rounded-lg max-w-4xl bg-gray-800">
+                <h1 class="text-3xl font-serif text-white">✦ THANK YOU ✦</h1>
+                <h2 class="text-xl font-semibold text-[#9994f0] mt-2">
+                    Thank you for Visiting My Portfolio!
+                </h2>
+                <p class="text-white mt-4">
+                    I appreciate your interest in my work. As a BCA student passionate about graphic design, web design,
+                    and
+                    frontend development,
+                    I strive to create visually appealing and user-friendly projects. If you have any questions or would
+                    like to collaborate,
+                    feel free to reach out. I look forward to connecting with you and showcasing more of my creative
+                    journey.
+                </p>
+            </div>
+        </div>
+
+
+        <!-- Reach Me section -->
+        <div class="flex flex-col items-center justify-center mt-10">
+            <h1 class="text-3xl font-serif text-white mb-4">✦ Reach Me ✦</h1>
+
+            <div class="flex space-x-4">
+                <!-- GitHub Button -->
+                <button
+                    class="group flex items-center w-12 h-12 bg-[#9994f0] text-white rounded-full shadow-md overflow-hidden transition-all duration-300 hover:w-36">
+                    <div class="flex items-center justify-center w-12 h-12">
+                        <i class="fa-brands fa-github text-xl ml-3.5"></i>
+                    </div>
+                    <span
+                        class="ml-2 opacity-0 group-hover:opacity-100 font-semibold transition-opacity duration-300 whitespace-nowrap"><a href="https://github.com/Madhura-Sarkar">GitHub</a></span>
+                </button>
+
+                <!-- Twitter Button -->
+                <button
+                    class="group flex items-center w-12 h-12 bg-[#9994f0] text-white rounded-full shadow-md overflow-hidden transition-all duration-300 hover:w-36">
+                    <div class="flex items-center justify-center w-12 h-12">
+                        <i class="fa-brands fa-x-twitter text-xl ml-3.5"></i>
+                    </div>
+                    <span
+                        class="ml-2 opacity-0 group-hover:opacity-100 font-semibold transition-opacity duration-300 whitespace-nowrap"><a href="https://x.com/webstudy2024">Twitter</a></span>
+                </button>
+
+                <!-- LinkedIn Button -->
+                <button
+                    class="group flex items-center w-12 h-12 bg-[#9994f0] text-white rounded-full shadow-md overflow-hidden transition-all duration-300 hover:w-36">
+                    <div class="flex items-center justify-center w-12 h-12">
+                        <i class="fa-brands fa-linkedin-in text-xl ml-3.5"></i>
+                    </div>
+                    <span
+                        class="ml-2 opacity-0 group-hover:opacity-100 font-semibold transition-opacity duration-300 whitespace-nowrap"><a href="https://www.linkedin.com/in/madhura-sarkar-a1987b2ab/">LinkedIn</a></span>
+                </button>
+
+                <!-- Instagram Button -->
+                <button
+                    class="group flex items-center w-12 h-12 bg-[#9994f0] text-white rounded-full shadow-md overflow-hidden transition-all duration-300 hover:w-36">
+                    <div class="flex items-center justify-center w-12 h-12">
+                        <i class="fa-brands fa-instagram text-xl ml-3.5"></i>
+                    </div>
+                    <span
+                        class="ml-2 opacity-0 group-hover:opacity-100 font-semibold transition-opacity duration-300 whitespace-nowrap"><a href="https://www.instagram.com/bad._.love13/">Instagram</a></span>
+                </button>
+            </div>
+        </div>
+
+
+
+        <!-- FAQs section  -->
+        <div class="flex-grow flex justify-center items-center p-4 mt-10">
+            <div class="text-center p-6 shadow-lg rounded-lg max-w-4xl bg-gray-800 w-full">
+                <h2 class="text-2xl font-bold mb-4 text-white">✦ Frequently Asked Questions</h2>
+
+                <div id="faq-list">
+                    <!-- Initial visible questions -->
+                    <div class="faq-item border-b border-gray-700 py-4">
+                        <div
+                            class="faq-question cursor-pointer text-md font-semibold flex justify-between items-center text-[#9994f0]">
+                            Do you have any work experience?
+                        </div>
+                        <div class="text-left faq-answer hidden mt-2 text-white">
+                            While I have not yet had the opportunity to work in a professional setting, I am highly
+                            motivated and committed to applying my skills and knowledge. I am eager to learn from
+                            seasoned
+                            professionals and contribute positively to the team.
+                        </div>
+                    </div>
+
+                    <div class="faq-item border-b border-gray-700 py-4">
+                        <div
+                            class="faq-question cursor-pointer text-md font-semibold flex justify-between items-center text-[#9994f0]">
+                            What if I need to choose between design and development?
+                        </div>
+                        <div class="text-left faq-answer hidden mt-2 text-white">
+                            While I am passionate about both design and development, my primary strength lies in design
+                            where I feel more confident. However, I am continuously learning new aspects of web
+                            development
+                            and committed to excelling in both areas, ensuring I deliver my best performance in the
+                            future.
+                        </div>
+                    </div>
+
+                    <!-- Initially hidden questions -->
+                    <div class="faq-item border-b border-gray-700 py-4 hidden">
+                        <div
+                            class="faq-question cursor-pointer text-md font-semibold flex justify-between items-center text-[#9994f0]">
+                            Why should you be hired?
+                        </div>
+                        <div class="text-left faq-answer hidden mt-2 text-white">
+                            I am a dedicated, disciplined individual with a passion for learning and self-improvement.
+                            My
+                            enthusiasm, strong work ethic, and willingness to adapt quickly make me a valuable addition
+                            to
+                            any team.
+                        </div>
+                    </div>
+
+                    <div class="faq-item border-b border-gray-700 py-4 hidden">
+                        <div
+                            class="faq-question cursor-pointer text-md font-semibold flex justify-between items-center text-[#9994f0]">
+                            You have no work experience. Why should we hire a fresher like you?
+                        </div>
+                        <div class="text-left faq-answer hidden mt-2 text-white">
+                            Although I am at the beginning of my professional journey, I bring fresh ideas, a strong
+                            eagerness to learn, and a dedication to delivering high-quality work. I am confident that my
+                            skills and dedication will make me an asset to your organization.
+                        </div>
+                    </div>
+
+                    <div class="faq-item py-4 hidden">
+                        <div
+                            class="faq-question cursor-pointer text-md font-semibold flex justify-between items-center text-[#9994f0]">
+                            Are you currently a student?
+                        </div>
+                        <div class="text-left faq-answer hidden mt-2 text-white">
+                            Yes, I am currently pursuing a Bachelor's degree in Computer Applications (BCA). My focus is
+                            on
+                            graphic design, web design, and frontend development, which I believe will contribute to a
+                            strong foundation for my future career.
+                        </div>
+                    </div>
+                </div>
+
+                <button id="toggle-questions" class="mt-4 px-4 py-2 bg-[#9994f0] font-bold text-white rounded-lg">Show
+                    More</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="py-12 px-6 flex justify-center items-center mt-10"
+        style="background-color: #081124; font-family: 'Krub';">
+        <div class="max-w-4xl mx-auto text-white text-left">
+            <div class="flex flex-col lg:flex-row justify-center items-center">
+
+                <!-- Contact Section with Form -->
+                <div class="lg:w-1/4 mb-10 lg:mb-0">
+                    <h2 class="text-3xl font-bold font-['Orbitron'] text-[#9994f0]">Get in touch.</h2>
+                    <p class="mt-4 text-white">
+                        We’re here if you ever have any questions, comments, or just want to chat. Drop us a line
+                        through the form below or shoot us an email. Our inbox is always open.
+                    </p>
+                </div>
+
+                <!-- Navigation Links Section -->
+                <div class="lg:w-3/4 flex flex-col sm:flex-row justify-around space-y-8 sm:space-y-0 mt-8 lg:mt-0">
+
+                    <!-- Content Links -->
+                    <div>
+                        <h3 class="font-medium font-['Orbitron'] mb-4 text-[#9994f0]">Content</h3>
+                        <ul class="space-y-2 font-['Orbitron'] text-white">
+                            <li><a href="#home" class="hover:underline">Home</a></li>
+                            <li><a href="#about" class="hover:underline">About</a></li>
+                            <li><a href="#" class="hover:underline">Projects</a></li>
+                            <li><a href="#contact" class="hover:underline">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div>
+                        <h3 class="font-medium font-['Orbitron'] mb-4 text-[#9994f0]">Social</h3>
+                        <ul class="space-y-2 font-['Orbitron'] text-white">
+                            <li><a href="https://www.instagram.com/bad._.love13/" class="hover:underline">Instagram</a></li>
+                            <li><a href="https://www.linkedin.com/in/madhura-sarkar-a1987b2ab/" class="hover:underline">LinkedIn</a></li>
+                            <li><a href="https://x.com/webstudy2024" class="hover:underline">Twitter</a></li>
+                            <li><a href="https://github.com/Madhura-Sarkar" class="hover:underline">GitHub</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div>
+                        <h3 class="font-medium font-['Orbitron'] mb-4 text-[#9994f0]">Contact</h3>
+                        <ul class="space-y-2 text-white">
+                            <li><a href="mailto:hello@example.com" class="hover:underline"><span>For Work --</span>
+                                    webstudy.2024@gmail.com</a></li>
+                            <li><a href="mailto:hello@example.com" class="hover:underline"><span>For Personal --</span>
+                                    madhurasarkar0@gmail.com</a></li>
+                            <li>Kolkata, INDIA</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- down footer  -->
+    <footer class="max-w-4xl p-4 mx-auto text-white text-center">
+        <p>© 2025 [Madhura Sarkar]. This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/"
+                target="_blank">CC BY 4.0 International License</a>.</p>
+    </footer>
+
+
+    <!-- link to custom js  -->
+    <script src="script.js"></script>
+    <!-- fontawsome js  -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+
+</html>
