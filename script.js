@@ -1,48 +1,61 @@
-const divs = document.querySelectorAll('div[id]');  // Select divs with ids
-const navLinks = document.querySelectorAll('.nav-link');
+document.addEventListener("DOMContentLoaded", function () {
+    const divs = document.querySelectorAll('div[id]');  // Select divs with ids
+    const navLinks = document.querySelectorAll('.nav-link');
 
-// Add active class to the first navbar link on page load
-document.querySelector('.nav-link[href="#home"]').classList.add('active');
-
-// Check if on projects page and set active class
-if (window.location.pathname.includes('projects.html')) {
-    document.querySelector('.nav-link[href="#projects"]').classList.add('active');
-}
-
-window.addEventListener('scroll', () => {
-    let currentDiv = '';
-
-    // Loop through each div to determine which one is in view
-    divs.forEach(div => {
-        const divTop = div.offsetTop;
-        const divHeight = div.clientHeight;
-
-        if (window.scrollY >= divTop - divHeight / 3) {
-            currentDiv = div.getAttribute('id');
-        }
-    });
+    // Determine the current page
+    const currentPage = window.location.pathname.split('/').pop(); // Get the current page name
 
     // Remove active class from all nav links
     navLinks.forEach(link => {
         link.classList.remove('active');
     });
 
-    // Add active class to the nav link corresponding to the current div
-    const activeLink = document.querySelector(`.nav-link[href="#${currentDiv}"]`);
-    if (activeLink) {
-        activeLink.classList.add('active');
+    // Set active class based on the current page
+    if (currentPage === 'index.html') {
+        document.querySelector('.nav-link[href="#home"]').classList.add('active');
+    } else if (currentPage === 'projects.html') {
+        document.querySelector('.nav-link[href="projects.html"]').classList.add('active');
     }
+
+    window.addEventListener('scroll', () => {
+        let currentDiv = '';
+
+        // Loop through each div to determine which one is in view
+        divs.forEach(div => {
+            const divTop = div.offsetTop;
+            const divHeight = div.clientHeight;
+
+            if (window.scrollY >= divTop - divHeight / 3) {
+                currentDiv = div.getAttribute('id');
+            }
+        });
+
+        // Remove active class from all nav links
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+        });
+
+        // Add active class to the nav link corresponding to the current div
+        const activeLink = document.querySelector(`.nav-link[href="#${currentDiv}"]`);
+        if (activeLink) {
+            activeLink.classList.add('active');
+        }
+    });
+
+    // Hamburger menu functionality
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when a link is clicked
+    navLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.add('hidden'); // Hide the menu
+        });
+    });
 });
-
-
-
-// hamburger menu 
-// Toggle the mobile menu
-document.getElementById('menu-toggle').addEventListener('click', function () {
-    var menu = document.getElementById('mobile-menu');
-    menu.classList.toggle('hidden');
-});
-
 
 // about script
 const paragraphs = [
@@ -113,3 +126,4 @@ toggleButton.addEventListener('click', () => {
     hiddenFaqItems.forEach(item => item.classList.toggle('hidden'));
     toggleButton.textContent = hiddenFaqItems[0].classList.contains('hidden') ? 'Show More' : 'Show Less';
 });
+
