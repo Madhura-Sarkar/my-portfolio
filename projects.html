@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- link to custom stylesheet  -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- font awesome css  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Tailwind CSS CDN (Updated to v3 for better support) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#111827ff] h-screen">
+
+    <!-- Navbar Section -->
+    <header class="p-4 text-white fixed top-0 left-0 w-full z-10 bg-[#081124]">
+        <nav class="py-1 px-2 sm:px-6 md:px-8 lg:px-12">
+            <div class="container mx-auto flex justify-between items-center">
+                <!-- Centered Navbar for Larger Screens -->
+                <ul class="hidden md:flex justify-center space-x-12 text-brown-900 font-bold w-full">
+                    <li><a href="index.html#home" class="nav-link hover:text-[#ffffff] transition">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link hover:text-[#ffffff] transition">About</a></li>
+                    <li class="active" aria-current="page"><a href="projects.html" class="nav-link">Projects</a>
+                    </li>
+                    <li><a href="index.html#contact" class="nav-link hover:text-[#ffffff] transition">Contact</a></li>
+                </ul>
+
+                <!-- Hamburger Menu for Small Screens (Right Aligned) -->
+                <button class="block md:hidden text-brown-900 ml-auto" id="menu-toggle">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <ul id="mobile-menu" class="md:hidden hidden mt-4 space-y-2 text-center text-brown-900 font-semibold">
+                <li class="active" aria-current="page">
+                    <a href="projects.html" class="nav-link transition">Projects</a>
+                </li>
+                <li>
+                    <a href="index.html#about" class="nav-link transition">About</a>
+                </li>
+                <li>
+                    <a href="index.html#home" class="nav-link transition">Home</a>
+                </li>
+                <li>
+                    <a href="index.html#contact" class="nav-link transition">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container mx-auto p-10 mt-20">
+        <div class="flex flex-col items-center justify-center mb-10">
+            <div class="img-container"> <img src="assets/projects.png" alt="projects" class="h-50 w-60"></div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="flex justify-center mb-6">
+            <input id="search-input" type="text" placeholder="Search your items here..."
+                class="bg-[#081124] w-2/3 p-2 rounded-l-full text-white placeholder-white focus:outline-none">
+            <button
+                class="bg-[#081124] text-white p-2 pr-4 rounded-r-full border-2 border-transparent hover:border-white">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="flex justify-center space-x-3 mb-6">
+            <button class="category-btn bg-[#9994f0] text-white px-4 py-2 rounded-full" data-category="all"><a
+                    href="">All</a></button>
+            <button class="category-btn bg-[#9994f0] text-white px-4 py-2 rounded-full" data-category="posters"><a
+                    href="#posters-section">Posters</a></button>
+            <button class="category-btn bg-[#9994f0] text-white px-4 py-2 rounded-full" data-category="banners"><a
+                    href="#banners-section">Banners</a></button>
+            <button class="category-btn bg-[#9994f0] text-white px-4 py-2 rounded-full" data-category="flyers"><a
+                    href="#digital-art-section">Digital
+                    Art</a></button>
+            <!-- More Button with Dropdown -->
+            <div class="relative">
+                <button id="more-btn" class="bg-[#9994f0] text-white px-4 py-2 rounded-full flex items-center">
+                    More <i class="fa-solid fa-circle-chevron-down ml-2"></i>
+                </button>
+                <div id="dropdown-menu" class="absolute bg-[#9994f0] text-white rounded-lg shadow-lg mt-2 hidden w-40">
+                    <button class="dropdown-item w-full text-left px-4 py-2 hover:bg-[#9994f0]"
+                        data-category="products"><a href="#products-section">Products</a></button>
+                    <button class="dropdown-item w-full text-left px-4 py-2 hover:bg-[#9994f0]"
+                        data-category="manipulations"><a href="#manipulations-section">Manipulations</a></button>
+                    <button class="dropdown-item w-full text-left px-4 py-2 hover:bg-[#9994f0]"
+                        data-category="retouches"><a href="#retouches-section">Retouches</a></button>
+                    <button class="dropdown-item w-full text-left px-4 py-2 hover:bg-[#9994f0]"
+                        data-category="brochures"><a href="#brochures-section">Brochures</a></button>
+                    <button class="dropdown-item w-full text-left px-4 py-2 hover:bg-[#9994f0]"
+                        data-category="logos"><a href="#logos-section">Logos</a></button>
+                    <button class="dropdown-item w-full text-left px-4 py-2 hover:bg-[#9994f0]"
+                        data-category="business-cards"><a href="#others-section">others</a></button>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Posters Section -->
+        <div id="posters-section" class="mb-10">
+            <h1 class="text-3xl font-serif text-white">✦ Posters ✦</h1>
+            <div id="projects-container"
+                class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 relative mt-10">
+
+                <!-- Project 1 -->
+                <div class="relative group project" data-category="posters">
+                    <img src="assets/coffee1pea.jpg" alt="Project 1" class="rounded-lg cursor-pointer">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg class="h-12 w-12 text-yellow-400 cursor-pointer open-modal"
+                            data-title="Coffee Retro Poster"
+                            data-description="A nostalgic design celebrating the warmth of coffee. Created using Photoshop for the layout and Illustrator for the detailed coffee cup models."
+                            data-images="assets/6.png, assets/7.png, assets/8.png" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12l-3-3m0 0l-3 3m3-3v12M3 12a9 9 0 0118 0" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="relative group project" data-category="posters">
+                    <img src="assets/Ramen poster.jpg" alt="Project 2" class="rounded-lg cursor-pointer">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg class="h-12 w-12 text-yellow-400 cursor-pointer open-modal"
+                            data-title="Noodles & Nostalgia"
+                            data-description="A fusion of Japanese and English elements, showcasing the delicious world of ramen. Crafted with Photoshop for the overall poster and Illustrator for the intricate ramen bowl illustration."
+                            data-images="assets/9.png, assets/10.png, assets/11.png" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12l-3-3m0 0l-3 3m3-3v12M3 12a9 9 0 0118 0" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="relative group project" data-category="posters">
+                    <img src="assets/hotdog.jpg" alt="Project 3" class="rounded-lg cursor-pointer">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg class="h-12 w-12 text-yellow-400 cursor-pointer open-modal" data-title="Vintage Buns"
+                            data-description="A fun retro design featuring the classic hotdog. Photoshop was used for the overall design, with Illustrator to create the detailed hotdog model."
+                            data-images="hotdog.jpg,https://via.placeholder.com/300,https://via.placeholder.com/300"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12l-3-3m0 0l-3 3m3-3v12M3 12a9 9 0 0118 0" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="relative group project" data-category="posters">
+                    <img src="assets/posterfilmAIB.jpg" alt="Project 3" class="rounded-lg cursor-pointer">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg class="h-12 w-12 text-yellow-400 cursor-pointer open-modal" data-title="Vintage Buns"
+                            data-description="A fun retro design featuring the classic hotdog. Photoshop was used for the overall design, with Illustrator to create the detailed hotdog model."
+                            data-images="hotdog.jpg,https://via.placeholder.com/300,https://via.placeholder.com/300"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12l-3-3m0 0l-3 3m3-3v12M3 12a9 9 0 0118 0" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Banner Section -->
+        <div id="banners-section" class="mb-10">
+            <h1 class="text-3xl font-serif text-white">✦ Banners ✦</h1>
+
+            <div id="projects-container"
+                class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 relative mt-10">
+
+                <!-- Project 1 -->
+                <div class="relative group project" data-category="banners">
+                    <img src="assets/hanabiheader1.jpg" alt="Project 1" class="rounded-lg cursor-pointer">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg class="h-12 w-12 text-yellow-400 cursor-pointer open-modal"
+                            data-title="Hanabi: Neon Marksman"
+                            data-description="A bold, vibrant digital design highlighting Hanabi’s fierce precision. With high contrast colors and dynamic lighting, this banner captures the energy of her gameplay."
+                            data-images="assets/hanabiheader1.jpg" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12l-3-3m0 0l-3 3m3-3v12M3 12a9 9 0 0118 0" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="relative group project" data-category="banners">
+                    <img src="assets/xavierheader.jpg" alt="Project 2" class="rounded-lg cursor-pointer">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg class="h-12 w-12 text-yellow-400 cursor-pointer open-modal"
+                            data-title="Xavier: Cosmic Sorcery"
+                            data-description="An electrifying digital banner featuring Xavier, where space and time bend around him. High contrast hues and futuristic effects bring his mystical power to life in this vibrant design."
+                            data-images="assets/xavierheader.jpg" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12l-3-3m0 0l-3 3m3-3v12M3 12a9 9 0 0118 0" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- more projects  -->
+            </div>
+        </div>
+
+
+        <!-- Digital Art Section -->
+        <div id="digital-art-section" class="mb-10">
+            <h1 class="text-3xl font-serif text-white">✦ Digital Arts ✦</h1>
+            <div id="projects-container"
+                class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 relative mt-10">
+
+                <!-- Project 1 -->
+                <div class="relative group project" data-category="digitalarts">
+                    <img src="assets/DigitalArt1.png" alt="Project 1" class="rounded-lg cursor-pointer">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg class="h-12 w-12 text-yellow-400 cursor-pointer open-modal"
+                            data-title="Elegance in Motion: The Ballerina"
+                            data-description="This artwork captures the graceful essence of a ballerina poised mid-performance. The flowing lines and curves of her figure are accentuated in shades of blue, pink, and white, creating a serene and elegant atmosphere. The piece brilliantly showcases the beauty of human movement, embodying the delicate balance and poise inherent in the art of dance."
+                            data-images="img.png" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12l-3-3m0 0l-3 3m3-3v12M3 12a9 9 0 0118 0" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="relative group project" data-category="digitalarts">
+                    <img src="assets/DigitalArt2.png" alt="Project 2" class="rounded-lg cursor-pointer">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg class="h-12 w-12 text-yellow-400 cursor-pointer open-modal"
+                            data-title="Tranquility in Bloom: The Lotus Flower"
+                            data-description="A vibrant lotus flower floats serenely on water, rendered in striking shades of pink, purple, and white, with a bold red center. The background of teal and green water, dotted with abstract lily pads, enhances the flower's prominence and creates a sense of peacefulness. This piece emphasizes the natural beauty and tranquility of the lotus, symbolizing purity and enlightenment."
+                            data-images="img.png" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12l-3-3m0 0l-3 3m3-3v12M3 12a9 9 0 0118 0" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- more projects -->
+            </div>
+        </div>
+
+
+        <!-- Manipulation Section -->
+        <div id="manipulation-section" class="mb-10">
+            <h1 class="text-3xl font-serif text-white">✦ Manipulations ✦</h1>
+
+            <div id="projects-container"
+                class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 relative mt-10">
+
+                <!-- Project 1 -->
+                <div class="relative group project" data-category="manipulations">
+                    <img src="assets/manipulation1.png" alt="Project 1" class="rounded-lg cursor-pointer">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg class="h-12 w-12 text-yellow-400 cursor-pointer open-modal"
+                            data-title="Ship in a Glass Bottle"
+                            data-description="This manipulation showcases a ship sailing on a wave contained within a glass bottle. The wave flows out of the bottle, creating a waterfall effect. Birds are flying in the sky above the ship, and rocks are positioned at the base of the bottle. This artwork beautifully combines elements of the sea and a ship in a surreal and thought-provoking way, making it a visually striking piece."
+                            data-images="assets/hanabiheader1.jpg" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12l-3-3m0 0l-3 3m3-3v12M3 12a9 9 0 0118 0" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="relative group project" data-category="manipulations">
+                    <img src="assets/Manipulation2.png" alt="Project 2" class="rounded-lg cursor-pointer">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg class="h-12 w-12 text-yellow-400 cursor-pointer open-modal" data-title="Library to Forest"
+                            data-description="In this manipulation, a library with bookshelves on both sides leads to a lush, green forest with waterfalls in the background. The forest is seamlessly integrated with the library, creating a fantastical and enchanting environment. This piece merges the concepts of knowledge and nature, suggesting a harmonious relationship between learning and the natural world."
+                            data-images="img.png" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12l-3-3m0 0l-3 3m3-3v12M3 12a9 9 0 0118 0" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- more projects  -->
+            </div>
+        </div>
+
+
+        <!-- Retouch Section -->
+        <div id="retouches-section" class="mb-10">
+            <h1 class="text-3xl font-serif text-white">✦ Retouch ✦</h1>
+
+            <div id="projects-container"
+                class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 relative mt-10">
+
+                <!-- Project 1 -->
+                <div class="relative group project" data-category="retouches">
+                    <img src="assets/Retouch1.png" alt="Project 1" class="rounded-lg cursor-pointer">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg class="h-12 w-12 text-yellow-400 cursor-pointer open-modal" data-title="Photo Colorization"
+                            data-description="On the left side, we have a stunning example of photo colorization. The original black-and-white image has been transformed into a vibrant, colored version. This technique breathes new life into old photographs, making them feel more contemporary and relatable while preserving the original details and emotions captured in the monochrome version."
+                            data-images="assets/hanabiheader1.jpg" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12l-3-3m0 0l-3 3m3-3v12M3 12a9 9 0 0118 0" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="relative group project" data-category="retouches">
+                    <img src="assets/Retouch2.png" alt="Project 2" class="rounded-lg cursor-pointer">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg class="h-12 w-12 text-yellow-400 cursor-pointer open-modal" data-title="Photo Restoration"
+                            data-description="On the right side, we see a powerful example of photo restoration. The original image, labeled Before, is damaged, cracked, and faded. The After image shows a meticulously restored photograph, with the cracks and damage removed, and the image quality significantly improved. This technique is invaluable for preserving memories and revitalizing old or damaged photographs, making them look as good as new."
+                            data-images="assets/xavierheader.jpg" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12l-3-3m0 0l-3 3m3-3v12M3 12a9 9 0 0118 0" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- more projects  -->
+            </div>
+        </div>
+
+
+        <!-- Brochure Section -->
+        <div id="brochures-section" class="mb-10">
+            <h1 class="text-3xl font-serif text-white">✦ Brochures ✦</h1>
+
+            <div id="projects-container"
+                class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 relative mt-10">
+
+                <!-- Project 1-a -->
+                <div class="relative group project" data-category="brochures">
+                    <img src="assets/brochure1a.jpg" alt="Project 1" class="rounded-lg cursor-pointer">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg class="h-12 w-12 text-yellow-400 cursor-pointer open-modal" data-title="Photo Colorization"
+                            data-description="On the left side, we have a stunning example of photo colorization. The original black-and-white image has been transformed into a vibrant, colored version. This technique breathes new life into old photographs, making them feel more contemporary and relatable while preserving the original details and emotions captured in the monochrome version."
+                            data-images="assets/hanabiheader1.jpg" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12l-3-3m0 0l-3 3m3-3v12M3 12a9 9 0 0118 0" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Project 1-b -->
+                <div class="relative group project" data-category="brochures">
+                    <img src="assets/brochure1b.jpg" alt="Project 1" class="rounded-lg cursor-pointer">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg class="h-12 w-12 text-yellow-400 cursor-pointer open-modal" data-title="Photo Colorization"
+                            data-description="On the left side, we have a stunning example of photo colorization. The original black-and-white image has been transformed into a vibrant, colored version. This technique breathes new life into old photographs, making them feel more contemporary and relatable while preserving the original details and emotions captured in the monochrome version."
+                            data-images="assets/hanabiheader1.jpg" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12l-3-3m0 0l-3 3m3-3v12M3 12a9 9 0 0118 0" />
+                        </svg>
+                    </div>
+                </div>
+                <!-- more projects  -->
+            </div>
+        </div>
+
+
+        <!-- Product Section -->
+        <div id="products-section" class="mb-10">
+            <h1 class="text-3xl font-serif text-white">✦ Products ✦</h1>
+
+            <div id="projects-container"
+                class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 relative mt-10">
+
+                <!-- Project 1-a -->
+                <div class="relative group project" data-category="products">
+                    <img src="assets/product.png" alt="Project 1" class="rounded-lg cursor-pointer">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg class="h-12 w-12 text-yellow-400 cursor-pointer open-modal" data-title="Photo Colorization"
+                            data-description="On the left side, we have a stunning example of photo colorization. The original black-and-white image has been transformed into a vibrant, colored version. This technique breathes new life into old photographs, making them feel more contemporary and relatable while preserving the original details and emotions captured in the monochrome version."
+                            data-images="assets/hanabiheader1.jpg" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12l-3-3m0 0l-3 3m3-3v12M3 12a9 9 0 0118 0" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- more projects  -->
+            </div>
+        </div>
+
+        <!-- Logo Section -->
+        <div id="logos-section" class="mb-10">
+            <h1 class="text-3xl font-serif text-white">✦ Logos ✦</h1>
+
+            <div id="projects-container"
+                class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 relative mt-10">
+
+                <!-- Project 1 -->
+                <div class="relative group project" data-category="logos">
+                    <img src="assets/burgerjoint1.jpg" alt="Project 1" class="rounded-lg cursor-pointer">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg class="h-12 w-12 text-yellow-400 cursor-pointer open-modal"
+                            data-title="Elegance in Motion: The Ballerina"
+                            data-description="This artwork captures the graceful essence of a ballerina poised mid-performance. The flowing lines and curves of her figure are accentuated in shades of blue, pink, and white, creating a serene and elegant atmosphere. The piece brilliantly showcases the beauty of human movement, embodying the delicate balance and poise inherent in the art of dance."
+                            data-images="img.png" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12l-3-3m0 0l-3 3m3-3v12M3 12a9 9 0 0118 0" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- more projects  -->
+            </div>
+        </div>
+
+
+
+        <!-- other Section -->
+        <div id="others-section" class="mb-10">
+            <h1 class="text-3xl font-serif text-white">✦ Others ✦</h1>
+
+            <div id="projects-container"
+                class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 relative mt-10">
+
+                <!-- Project 1 -->
+                <div class="relative group project" data-category="others">
+                    <img src="assets/graphicInfo.jpg" alt="Project 1" class="rounded-lg cursor-pointer">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg class="h-12 w-12 text-yellow-400 cursor-pointer open-modal"
+                            data-title="Elegance in Motion: The Ballerina"
+                            data-description="This artwork captures the graceful essence of a ballerina poised mid-performance. The flowing lines and curves of her figure are accentuated in shades of blue, pink, and white, creating a serene and elegant atmosphere. The piece brilliantly showcases the beauty of human movement, embodying the delicate balance and poise inherent in the art of dance."
+                            data-images="img.png" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12l-3-3m0 0l-3 3m3-3v12M3 12a9 9 0 0118 0" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- more projects  -->
+            </div>
+        </div>
+
+        <!-- more section  -->
+    </div>
+
+    <!-- Popup Modal -->
+    <div id="modal" class="fixed text-white inset-0 bg-black bg-opacity-70 flex justify-center items-center hidden">
+        <div class="bg-gray-800 p-4 rounded-lg w-4/5 sm:w-2/3 md:w-1/2 max-h-[70vh] h-auto overflow-y-auto relative">
+            <button id="close-modal" class="absolute top-2 right-4 text-white text-xl">&times;</button>
+            <h2 id="modal-title" class="text-2xl font-bold mb-2"></h2>
+            <p id="modal-description" class="text-gray-300 mb-3"></p>
+            <div id="modal-images" class="grid grid-cols-2 gap-2"></div>
+        </div>
+    </div>
+
+
+    <!-- Footer Section -->
+    <footer class="py-12 px-6 flex justify-center items-center mt-10"
+        style="background-color: #081124; font-family: 'Krub';">
+        <div class="max-w-4xl mx-auto text-white text-left">
+            <div class="flex flex-col lg:flex-row justify-center items-center">
+
+                <!-- Contact Section with Form -->
+                <div class="lg:w-1/4 mb-10 lg:mb-0">
+                    <h2 class="text-3xl font-bold font-['Orbitron'] text-[#9994f0]">Get in touch.</h2>
+                    <p class="mt-4 text-white">
+                        We’re here if you ever have any questions, comments, or just want to chat. Drop us a line
+                        through the form below or shoot us an email. Our inbox is always open.
+                    </p>
+                </div>
+
+                <!-- Navigation Links Section -->
+                <div class="lg:w-3/4 flex flex-col sm:flex-row justify-around space-y-8 sm:space-y-0 mt-8 lg:mt-0">
+
+                    <!-- Content Links -->
+                    <div>
+                        <h3 class="font-medium font-['Orbitron'] mb-4 text-[#9994f0]">Content</h3>
+                        <ul class="space-y-2 font-['Orbitron'] text-white">
+                            <li><a href="#home" class="hover:underline">Home</a></li>
+                            <li><a href="#about" class="hover:underline">About</a></li>
+                            <li><a href="#" class="hover:underline">Projects</a></li>
+                            <li><a href="#contact" class="hover:underline">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div>
+                        <h3 class="font-medium font-['Orbitron'] mb-4 text-[#9994f0]">Social</h3>
+                        <ul class="space-y-2 font-['Orbitron'] text-white">
+                            <li><a href="https://www.instagram.com/bad._.love13/" class="hover:underline">Instagram</a>
+                            </li>
+                            <li><a href="https://www.linkedin.com/in/madhura-sarkar-a1987b2ab/"
+                                    class="hover:underline">LinkedIn</a></li>
+                            <li><a href="https://x.com/webstudy2024" class="hover:underline">Twitter</a></li>
+                            <li><a href="https://github.com/Madhura-Sarkar" class="hover:underline">GitHub</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div>
+                        <h3 class="font-medium font-['Orbitron'] mb-4 text-[#9994f0]">Contact</h3>
+                        <ul class="space-y-2 text-white">
+                            <li><a href="mailto:hello@example.com" class="hover:underline"><span>For Work --</span>
+                                    webstudy.2024@gmail.com</a></li>
+                            <li><a href="mailto:hello@example.com" class="hover:underline"><span>For Personal --</span>
+                                    madhurasarkar0@gmail.com</a></li>
+                            <li>Kolkata, INDIA</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- down footer  -->
+    <footer class="max-w-4xl p-4 mx-auto text-white text-center">
+        <p>© 2025 [Madhura Sarkar]. This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/"
+                target="_blank">CC BY 4.0 International License</a>.</p>
+    </footer>
+
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const modal = document.getElementById("modal");
+            const modalTitle = document.getElementById("modal-title");
+            const modalDescription = document.getElementById("modal-description");
+            const modalImages = document.getElementById("modal-images");
+            const closeModal = document.getElementById("close-modal");
+
+            document.querySelectorAll(".open-modal").forEach(button => {
+                button.addEventListener("click", function () {
+                    modalTitle.innerText = this.getAttribute("data-title");
+                    modalDescription.innerText = this.getAttribute("data-description");
+
+                    const images = this.getAttribute("data-images").split(",");
+                    modalImages.innerHTML = images.map(img => `<img src="${img}" class="rounded-lg w-full">`).join("");
+
+                    modal.classList.remove("hidden");
+                });
+            });
+
+            closeModal.addEventListener("click", function () {
+                modal.classList.add("hidden");
+            });
+
+            modal.addEventListener("click", function (event) {
+                if (event.target === modal) {
+                    modal.classList.add("hidden");
+                }
+            });
+
+            const moreBtn = document.getElementById("more-btn");
+            const dropdownMenu = document.getElementById("dropdown-menu");
+            const dropdownItems = document.querySelectorAll(".dropdown-item");
+
+            // Toggle dropdown on click
+            moreBtn.addEventListener("click", function () {
+                dropdownMenu.classList.toggle("hidden");
+            });
+
+            // Hide dropdown when clicking outside
+            document.addEventListener("click", function (event) {
+                if (!moreBtn.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                    dropdownMenu.classList.add("hidden");
+                }
+            });
+
+            // Handle category selection from dropdown
+            dropdownItems.forEach(item => {
+                item.addEventListener("click", function () {
+                    const category = this.getAttribute("data-category");
+                    filterProjects(category);
+                    dropdownMenu.classList.add("hidden");
+                });
+            });
+
+            // Function to filter projects based on category
+            function filterProjects(category) {
+                const postersSection = document.getElementById("posters-section");
+                const bannersSection = document.getElementById("banners-section");
+                const digitalartsSection = document.getElementById("digital-art-section");
+                const manipulationsSection = document.getElementById("manipulations-section");
+                const retouchesSection = document.getElementById("retouches-section");
+                const brochuresSection = document.getElementById("brochures-section");
+                const productsSection = document.getElementById("products-section");
+                const logosSection = document.getElementById("logos-section");
+                const othersSection = document.getElementById("others-section");
+
+                // Show or hide sections based on category
+                if (category === "all") {
+                    postersSection.style.display = "block";
+                    bannersSection.style.display = "block";
+                } else if (category === "posters") {
+                    postersSection.style.display = "block";
+                    bannersSection.style.display = "none";
+                } else if (category === "banners") {
+                    postersSection.style.display = "none";
+                    bannersSection.style.display = "block";
+                } else {
+                    postersSection.style.display = "none";
+                    bannersSection.style.display = "none";
+                }
+
+                // Filter projects within the visible section
+                document.querySelectorAll(".project").forEach(project => {
+                    if (category === "all" || project.getAttribute("data-category") === category) {
+                        project.style.display = "block";
+                    } else {
+                        project.style.display = "none";
+                    }
+                });
+            }
+
+            // Search functionality
+            document.getElementById("search-input").addEventListener("input", function () {
+                const query = this.value.toLowerCase();
+                const postersSection = document.getElementById("posters-section");
+                const bannersSection = document.getElementById("banners-section");
+                const digitalartsSection = document.getElementById("digital-art-section");
+                const manipulationsSection = document.getElementById("manipulations-section");
+                const retouchesSection = document.getElementById("retouches-section");
+                const brochuresSection = document.getElementById("brochures-section");
+                const productsSection = document.getElementById("products-section");
+                const logosSection = document.getElementById("logos-section");
+                const othersSection = document.getElementById("others-section");
+
+                // Default to showing both sections
+                postersSection.style.display = "block";
+                bannersSection.style.display = "block";
+
+                // Check if query matches "poster" or "banner"
+                if (query.includes("poster")) {
+                    postersSection.style.display = "block";
+                    bannersSection.style.display = "none";  // Hide banner section
+                } else if (query.includes("banner")) {
+                    postersSection.style.display = "none";  // Hide poster section
+                    bannersSection.style.display = "block";
+                } else if (query.includes("digitalarts")) {
+                    postersSection.style.display = "none";  // Hide poster section
+                    bannersSection.style.display = "block";
+                } else if (query.includes("manipulations")) {
+                    postersSection.style.display = "none";  // Hide poster section
+                    bannersSection.style.display = "block";
+                } else if (query.includes("retouches")) {
+                    postersSection.style.display = "none";  // Hide poster section
+                    bannersSection.style.display = "block";
+                } else if (query.includes("brochures")) {
+                    postersSection.style.display = "none";  // Hide poster section
+                    bannersSection.style.display = "block";
+                } else if (query.includes("products")) {
+                    postersSection.style.display = "none";  // Hide poster section
+                    bannersSection.style.display = "block";
+                } else if (query.includes("logos")) {
+                    postersSection.style.display = "none";  // Hide poster section
+                    bannersSection.style.display = "block";
+                } else if (query.includes("others")) {
+                    postersSection.style.display = "none";  // Hide poster section
+                    bannersSection.style.display = "block";
+                } else {
+                    // If neither "poster" nor "banner", show both sections
+                    postersSection.style.display = "block";
+                    bannersSection.style.display = "block";
+                }
+
+                // Filter projects by title (if necessary)
+                document.querySelectorAll(".project").forEach(project => {
+                    const title = project.querySelector("img").alt.toLowerCase();
+                    // Show or hide projects based on whether their title matches the query
+                    if (title.includes(query)) {
+                        project.style.display = "block"; // Show matching projects
+                    } else {
+                        project.style.display = "block"; // Keep projects visible, but you can remove this line if you want them hidden
+                    }
+                });
+            });
+
+        });
+    </script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const currentPage = window.location.pathname;
+            const navLinks = document.querySelectorAll(".nav-link");
+
+            navLinks.forEach(link => {
+                if (currentPage.includes(link.getAttribute("href").split('/')[0])) {
+                    link.classList.add("active");  // Add 'active' class
+                } else {
+                    link.classList.remove("active");  // Remove 'active' class
+                }
+            });
+        });
+    </script>
+
+
+
+    <!-- link to custom js  -->
+    <script src="script.js"></script>
+    <!-- fontawsome js  -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+
+</html>
