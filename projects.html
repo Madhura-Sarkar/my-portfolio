@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Portfolio projects</title>
     <!-- link to custom stylesheet  -->
     <link rel="stylesheet" href="style.css">
 
@@ -40,14 +40,14 @@
 
             <!-- Mobile Menu -->
             <ul id="mobile-menu" class="md:hidden hidden mt-4 space-y-2 text-center text-brown-900 font-semibold">
-                <li class="active" aria-current="page">
-                    <a href="projects.html" class="nav-link transition">Projects</a>
+                <li>
+                    <a  href="index.html#home" class="nav-link transition">Home</a>
                 </li>
                 <li>
                     <a href="index.html#about" class="nav-link transition">About</a>
                 </li>
-                <li>
-                    <a href="index.html#home" class="nav-link transition">Home</a>
+                <li class="active" aria-current="page">
+                    <a href="projects.html" class="nav-link transition">Projects</a>
                 </li>
                 <li>
                     <a href="index.html#contact" class="nav-link transition">Contact</a>
@@ -58,7 +58,7 @@
 
     <div class="container mx-auto p-10 mt-20">
         <div class="flex flex-col items-center justify-center mb-10">
-            <div class="img-container"> <img src="assets/projects.png" alt="projects" class="h-50 w-60"></div>
+            <div class="img-container"> <img src="assets/projects.png" alt="projects" class="h-60 w-70"></div>
         </div>
 
         <!-- Search Bar -->
@@ -72,38 +72,42 @@
         </div>
 
         <!-- Category Filters -->
-<div class="flex flex-wrap justify-center space-x-2 gap-2 sm:space-x-3 mb-6">
-    <button class="category-btn bg-[#9994f0] text-white px-3 sm:px-4 py-1 sm:py-2 text-sm sm:text-base rounded-full"
-        data-category="all"><a href="">All</a></button>
-    <button class="category-btn bg-[#9994f0] text-white px-3 sm:px-4 py-1 sm:py-2 text-sm sm:text-base rounded-full"
-        data-category="posters"><a href="#posters-section">Posters</a></button>
-    <button class="category-btn bg-[#9994f0] text-white px-3 sm:px-4 py-1 sm:py-2 text-sm sm:text-base rounded-full"
-        data-category="banners"><a href="#banners-section">Banners</a></button>
-    <button class="category-btn bg-[#9994f0] text-white px-3 sm:px-4 py-1 sm:py-2 text-sm sm:text-base rounded-full"
-        data-category="flyers"><a href="#digital-art-section">Digital Art</a></button>
+        <div class="flex flex-wrap justify-center space-x-2 gap-2 sm:space-x-3 mb-6">
+            <button
+                class="category-btn bg-[#9994f0] text-white px-3 sm:px-4 py-1 sm:py-2 text-sm sm:text-base rounded-full"
+                data-category="all"><a href="">All</a></button>
+            <button
+                class="category-btn bg-[#9994f0] text-white px-3 sm:px-4 py-1 sm:py-2 text-sm sm:text-base rounded-full"
+                data-category="posters"><a href="#posters-section">Posters</a></button>
+            <button
+                class="category-btn bg-[#9994f0] text-white px-3 sm:px-4 py-1 sm:py-2 text-sm sm:text-base rounded-full"
+                data-category="banners"><a href="#banners-section">Banners</a></button>
+            <button
+                class="category-btn bg-[#9994f0] text-white px-3 sm:px-4 py-1 sm:py-2 text-sm sm:text-base rounded-full"
+                data-category="flyers"><a href="#digital-art-section">Digital Art</a></button>
 
-    <!-- More Button with Dropdown -->
-    <div class="relative">
-        <button id="more-btn"
-            class="bg-[#9994f0] text-white px-3 sm:px-4 py-1 sm:py-2 text-sm sm:text-base rounded-full flex items-center">
-            More <i class="fa-solid fa-circle-chevron-down ml-2"></i>
-        </button>
-        <div id="dropdown-menu" class="absolute bg-[#9994f0] text-white rounded-lg shadow-lg mt-2 hidden w-40">
-            <button class="dropdown-item w-full text-left px-4 py-2 hover:bg-[#9994f0]"
-                data-category="products"><a href="#products-section">Products</a></button>
-            <button class="dropdown-item w-full text-left px-4 py-2 hover:bg-[#9994f0]"
-                data-category="manipulations"><a href="#manipulations-section">Manipulations</a></button>
-            <button class="dropdown-item w-full text-left px-4 py-2 hover:bg-[#9994f0]"
-                data-category="retouches"><a href="#retouches-section">Retouches</a></button>
-            <button class="dropdown-item w-full text-left px-4 py-2 hover:bg-[#9994f0]"
-                data-category="brochures"><a href="#brochures-section">Brochures</a></button>
-            <button class="dropdown-item w-full text-left px-4 py-2 hover:bg-[#9994f0]"
-                data-category="logos"><a href="#logos-section">Logos</a></button>
-            <button class="dropdown-item w-full text-left px-4 py-2 hover:bg-[#9994f0]"
-                data-category="business-cards"><a href="#others-section">Others</a></button>
+            <!-- More Button with Dropdown -->
+            <div class="relative">
+                <button id="more-btn"
+                    class="bg-[#9994f0] text-white px-3 sm:px-4 py-1 sm:py-2 text-sm sm:text-base rounded-full flex items-center">
+                    More <i class="fa-solid fa-circle-chevron-down ml-2"></i>
+                </button>
+                <div id="dropdown-menu" class="absolute bg-[#9994f0] text-white rounded-lg shadow-lg mt-2 hidden w-40">
+                    <button class="dropdown-item w-full text-left px-4 py-2 hover:bg-[#9994f0]"
+                        data-category="products"><a href="#products-section">Products</a></button>
+                    <button class="dropdown-item w-full text-left px-4 py-2 hover:bg-[#9994f0]"
+                        data-category="manipulations"><a href="#manipulations-section">Manipulations</a></button>
+                    <button class="dropdown-item w-full text-left px-4 py-2 hover:bg-[#9994f0]"
+                        data-category="retouches"><a href="#retouches-section">Retouches</a></button>
+                    <button class="dropdown-item w-full text-left px-4 py-2 hover:bg-[#9994f0]"
+                        data-category="brochures"><a href="#brochures-section">Brochures</a></button>
+                    <button class="dropdown-item w-full text-left px-4 py-2 hover:bg-[#9994f0]" data-category="logos"><a
+                            href="#logos-section">Logos</a></button>
+                    <button class="dropdown-item w-full text-left px-4 py-2 hover:bg-[#9994f0]"
+                        data-category="business-cards"><a href="#others-section">Others</a></button>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
 
 
         <!-- Posters Section -->
@@ -151,7 +155,7 @@
                         class="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
                         <svg class="h-12 w-12 text-yellow-400 cursor-pointer open-modal" data-title="Vintage Buns"
                             data-description="A fun retro design featuring the classic hotdog. Photoshop was used for the overall design, with Illustrator to create the detailed hotdog model."
-                            data-images="hotdog.jpg,https://via.placeholder.com/300,https://via.placeholder.com/300"
+                            data-images=" assets/12.png, assets/13.png, assets/14.png"
                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M15 12l-3-3m0 0l-3 3m3-3v12M3 12a9 9 0 0118 0" />
@@ -161,18 +165,57 @@
 
                 <!-- Project 4 -->
                 <div class="relative group project" data-category="posters">
-                    <img src="assets/posterfilmAIB.jpg" alt="Project 3" class="rounded-lg cursor-pointer">
+                    <img src="assets/donut.png" alt="Project 4" class="rounded-lg cursor-pointer">
                     <div
                         class="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
-                        <svg class="h-12 w-12 text-yellow-400 cursor-pointer open-modal" data-title="Vintage Buns"
-                            data-description="A fun retro design featuring the classic hotdog. Photoshop was used for the overall design, with Illustrator to create the detailed hotdog model."
-                            data-images="hotdog.jpg,https://via.placeholder.com/300,https://via.placeholder.com/300"
+                        <svg class="h-12 w-12 text-yellow-400 cursor-pointer open-modal"
+                            data-title="Tasty Donuts: Fresh and Delicious" data-description="Treat yourself to the mouthwatering goodness of Tasty Donuts. Our donuts are freshly made to perfection, delivering a heavenly combination of soft, fluffy dough and irresistible icing. Each bite will transport you to a world of pure delight!
+
+                            Chocolate Delight: Dive into the rich, luscious flavor of our chocolate donut, generously topped with a smooth chocolate glaze and colorful sprinkles. It's a chocolate lover's dream come true.
+                            
+                            Pretty in Pink: Satisfy your sweet tooth with our charming pink donut, adorned with a delightful pink icing and playful sprinkles. This donut is as beautiful as it is delicious.
+                            
+                            At just $10, you can enjoy a box of these delectable treats, perfect for sharing with friends and family or savoring all on your own. Whether you’re looking for a morning pick-me-up or an afternoon treat, Tasty Donuts are the ultimate indulgence.
+                            
+                            Taste the joy, one donut at a time!"
+                            data-images=" assets/15.png,  assets/16.png,  assets/17.png"
                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M15 12l-3-3m0 0l-3 3m3-3v12M3 12a9 9 0 0118 0" />
                         </svg>
                     </div>
                 </div>
+
+                <!-- Project 5 -->
+                <div class="relative group project" data-category="posters">
+                    <img src="assets/posterfilmAIB.jpg" alt="Project 5" class="rounded-lg cursor-pointer">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg class="h-12 w-12 text-yellow-400 cursor-pointer open-modal"
+                            data-title="Alice in Borderland: A Thrilling Netflix Original" data-description="Get Ready for an Adventure Beyond Imagination!
+
+                            Dive into the electrifying world of Alice in Borderland, an exhilarating Netflix original series that will leave you on the edge of your seat. Set in a mysterious parallel Tokyo, this gripping show follows the journey of Arisu and his friends as they navigate a deadly game of survival. With every turn, they face life-threatening challenges that push their limits and question their very existence.
+                            
+                            Stunning Visuals: Immerse yourself in a captivating cityscape, beautifully rendered with stunning visuals that bring the story to life. The iconic Tokyo Tower and other landmarks take on a hauntingly surreal quality in this alternate reality.
+                            
+                            Compelling Characters: Meet a diverse cast of characters, each with their own unique strengths and weaknesses. Follow their development as they form alliances, confront their fears, and fight to escape the deadly games.
+                            
+                            Intense Plot: Prepare for heart-pounding suspense as each episode unfolds with unexpected twists and turns. The high-stakes challenges and strategic gameplay will keep you hooked from start to finish.
+                            
+                            Japanese Culture: Experience a rich cultural tapestry woven into the storyline, with elements of Japanese mythology, modern society, and traditional values seamlessly integrated into the plot.
+                            
+                            Premiering on December 22, Alice in Borderland is a must-watch series for fans of thrillers, sci-fi, and adventure. Don’t miss out on this unforgettable journey into a world where survival is the ultimate game.
+                            
+                            Stream Now on Netflix!" data-images="assets/18.png,  assets/19.png,  assets/20.png"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12l-3-3m0 0l-3 3m3-3v12M3 12a9 9 0 0118 0" />
+                        </svg>
+                    </div>
+                </div>
+
+
+                <!-- more projects -->
             </div>
         </div>
 
@@ -265,7 +308,7 @@
 
 
         <!-- Manipulation Section -->
-        <div id="manipulation-section" class="mb-10">
+        <div id="manipulations-section" class="mb-10">
             <h1 class="text-3xl font-serif text-white">✦ Manipulations ✦</h1>
 
             <div id="projects-container"
@@ -361,10 +404,11 @@
                     <img src="assets/brochure1a.jpg" alt="Project 1" class="rounded-lg cursor-pointer">
                     <div
                         class="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
-                        <svg class="h-12 w-12 text-yellow-400 cursor-pointer open-modal" data-title="Photo Colorization"
-                            data-description="On the left side, we have a stunning example of photo colorization. The original black-and-white image has been transformed into a vibrant, colored version. This technique breathes new life into old photographs, making them feel more contemporary and relatable while preserving the original details and emotions captured in the monochrome version."
-                            data-images="assets/hanabiheader1.jpg" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
+                        <svg class="h-12 w-12 text-yellow-400 cursor-pointer open-modal"
+                            data-title="Kids' Library Brochures"
+                            data-description="Our vibrant library brochures capture the essence of fostering a love for reading in children. The left brochure invites young readers to explore an extensive collection of children's books, ebooks, and access the internet for educational purposes. It highlights engaging activities such as the Season Reading Challenges, and provides a convenient schedule of our operating hours: Monday to Friday from 11:00 to 18:00, and Saturday & Sunday from 12:00 to 16:00."
+                            data-images="" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M15 12l-3-3m0 0l-3 3m3-3v12M3 12a9 9 0 0118 0" />
                         </svg>
@@ -376,10 +420,11 @@
                     <img src="assets/brochure1b.jpg" alt="Project 1" class="rounded-lg cursor-pointer">
                     <div
                         class="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
-                        <svg class="h-12 w-12 text-yellow-400 cursor-pointer open-modal" data-title="Photo Colorization"
-                            data-description="On the left side, we have a stunning example of photo colorization. The original black-and-white image has been transformed into a vibrant, colored version. This technique breathes new life into old photographs, making them feel more contemporary and relatable while preserving the original details and emotions captured in the monochrome version."
-                            data-images="assets/hanabiheader1.jpg" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
+                        <svg class="h-12 w-12 text-yellow-400 cursor-pointer open-modal"
+                            data-title="Kids' Library Brochures"
+                            data-description="The right brochure celebrates the joy of reading and offers practical tips for parents and caregivers to encourage reading habits in children. From making reading a routine to creating a cozy reading nook, it emphasizes the importance of regular library visits and exploring various genres. Additionally, it outlines the numerous benefits of libraries for children, such as providing free entertainment, offering freedom of choice, and fostering a lasting relationship with the library."
+                            data-images="" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M15 12l-3-3m0 0l-3 3m3-3v12M3 12a9 9 0 0118 0" />
                         </svg>
@@ -402,10 +447,15 @@
                     <img src="assets/product.png" alt="Project 1" class="rounded-lg cursor-pointer">
                     <div
                         class="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
-                        <svg class="h-12 w-12 text-yellow-400 cursor-pointer open-modal" data-title="Photo Colorization"
-                            data-description="On the left side, we have a stunning example of photo colorization. The original black-and-white image has been transformed into a vibrant, colored version. This technique breathes new life into old photographs, making them feel more contemporary and relatable while preserving the original details and emotions captured in the monochrome version."
-                            data-images="assets/hanabiheader1.jpg" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
+                        <svg class="h-12 w-12 text-yellow-400 cursor-pointer open-modal"
+                            data-title="Winter Skincare Collection"
+                            data-description="Embrace the winter season with our specially curated Winter Skincare Collection, designed to cater to all skin types. This collection features two essential products:
+
+                            Brightening Cream B5: This luxurious cream is formulated to brighten and rejuvenate your skin, leaving it radiant and glowing even in the harsh winter months. Enriched with Vitamin B5, it deeply hydrates and nourishes your skin.
+                            
+                            Advance Night Repair: Our advanced night repair cream works overnight to repair and rejuvenate your skin. Packed with powerful ingredients, it helps reduce signs of aging, leaving your skin looking youthful and refreshed by morning."
+                            data-images="" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M15 12l-3-3m0 0l-3 3m3-3v12M3 12a9 9 0 0118 0" />
                         </svg>
@@ -429,9 +479,29 @@
                     <div
                         class="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
                         <svg class="h-12 w-12 text-yellow-400 cursor-pointer open-modal"
-                            data-title="Elegance in Motion: The Ballerina"
-                            data-description="This artwork captures the graceful essence of a ballerina poised mid-performance. The flowing lines and curves of her figure are accentuated in shades of blue, pink, and white, creating a serene and elegant atmosphere. The piece brilliantly showcases the beauty of human movement, embodying the delicate balance and poise inherent in the art of dance."
-                            data-images="img.png" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            data-title="BurgerJoint Branding & Packaging Collection"
+                            data-description="Introducing the visually stunning branding and packaging collection for BurgerJoint, a unique burger joint. Our branding seamlessly combines vibrant colors, modern design, and eye-catching logos to create a memorable visual identity. Here are the key elements of our branding:
+
+                            Color Palette: A carefully selected palette of red, green, orange, and light beige, providing a fresh and energetic vibe.
+                            
+                            Logo Designs:
+                            
+                            Triangular Background Logos: Featuring the iconic burger symbol and BurgerJoint text in various color combinations.
+                            
+                            Circular and Rectangular Logos: Circular logo with BURGER JOINT and BURGER OR THERE text, alongside rectangular logos with the burger icon and BurgerJoint text.
+                            
+                            Larger Logos: Showcasing the BurgerJoint text in different color schemes for versatility.
+                            
+                            Branded Packaging Materials:
+                            
+                            Paper Bags: Elegant and functional, adorned with the BurgerJoint logo.
+                            
+                            Logo Stickers: A sheet of stickers for seamless branding across various surfaces.
+                            
+                            Burger Box: A stylish burger box featuring the BurgerJoint logo, enhancing the overall dining experience.
+                            
+                            The BurgerJoint branding and packaging collection encapsulates the essence of a modern, vibrant burger joint, creating a cohesive and attractive brand identity."
+                            data-images="" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M15 12l-3-3m0 0l-3 3m3-3v12M3 12a9 9 0 0118 0" />
@@ -458,9 +528,36 @@
                     <div
                         class="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity">
                         <svg class="h-12 w-12 text-yellow-400 cursor-pointer open-modal"
-                            data-title="Elegance in Motion: The Ballerina"
-                            data-description="This artwork captures the graceful essence of a ballerina poised mid-performance. The flowing lines and curves of her figure are accentuated in shades of blue, pink, and white, creating a serene and elegant atmosphere. The piece brilliantly showcases the beauty of human movement, embodying the delicate balance and poise inherent in the art of dance."
-                            data-images="img.png" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            data-title="Social Media Platforms Infographic"
+                            data-description="Pinterest:
+                            -Largest social site for discovery
+                            -50%+ of users are men
+                            -250 million monthly active users
+                            
+                            Twitter:
+                            -Micro-blogging social site that's 280 characters
+                            -Over 69 million Twitter users in the US
+                            -6000 tweets on average every second
+                            -326 million monthly active users
+                            
+                            WhatsApp:
+                            -WhatsApp has 2 billion active users worldwide
+                            -More than 100 billion messages are sent every day on WhatsApp
+                            -Founded in 2009 as a mobile app
+                            -India has the most WhatsApp monthly active users (487.5 million)
+                            
+                            Facebook:
+                            -Mobile is Facebook's cash cow
+                            -1.56 billion daily active mobile users
+                            -Users spend 35 minutes on Facebook every day
+                            -25% of U.S. Facebook users are aged 25 to 34
+                            -2.23 billion monthly active users
+                            
+                            Instagram:
+                            -Visual content platform with 2 billion monthly active users
+                            -37.04% of the world’s 5.4 billion active internet users regularly access Instagram
+                            -India has the largest addressable Instagram ad audience size (385.35 million), -followed by the United States (166.15 million) and Brazil (135.05 million)"
+                            data-images="" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M15 12l-3-3m0 0l-3 3m3-3v12M3 12a9 9 0 0118 0" />
@@ -546,9 +643,26 @@
 
     <!-- down footer  -->
     <footer class="max-w-4xl p-4 mx-auto text-white text-center">
-        <p>© 2025 [Madhura Sarkar]. This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/"
-                target="_blank">CC BY 4.0 International License</a>.</p>
+        <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
+            <a property="dct:title" rel="cc:attributionURL" href="https://webstudy2024.netlify.app/">Portfolio</a> by
+            <a rel="cc:attributionURL dct:creator" property="cc:attributionName"
+                href="https://www.linkedin.com/in/madhura-sarkar-a1987b2ab/">Madhura Sarkar</a>
+            is licensed under
+            <a href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank"
+                rel="license noopener noreferrer">
+                CC BY-NC 4.0
+            </a>
+            <span style="display: inline-flex; margin-left: 10px;">
+                <img style="height:22px; margin-right: 5px;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="CC">
+                <img style="height:22px; margin-right: 5px;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="BY">
+                <img style="height:22px;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"
+                    alt="NC">
+            </span>
+        </p>
     </footer>
+
 
 
 
@@ -560,45 +674,45 @@
             const modalDescription = document.getElementById("modal-description");
             const modalImages = document.getElementById("modal-images");
             const closeModal = document.getElementById("close-modal");
-
+    
             document.querySelectorAll(".open-modal").forEach(button => {
                 button.addEventListener("click", function () {
                     modalTitle.innerText = this.getAttribute("data-title");
                     modalDescription.innerText = this.getAttribute("data-description");
-
+    
                     const images = this.getAttribute("data-images").split(",");
                     modalImages.innerHTML = images.map(img => `<img src="${img}" class="rounded-lg w-full">`).join("");
-
+    
                     modal.classList.remove("hidden");
                 });
             });
-
+    
             closeModal.addEventListener("click", function () {
                 modal.classList.add("hidden");
             });
-
+    
             modal.addEventListener("click", function (event) {
                 if (event.target === modal) {
                     modal.classList.add("hidden");
                 }
             });
-
+    
             const moreBtn = document.getElementById("more-btn");
             const dropdownMenu = document.getElementById("dropdown-menu");
             const dropdownItems = document.querySelectorAll(".dropdown-item");
-
+    
             // Toggle dropdown on click
             moreBtn.addEventListener("click", function () {
                 dropdownMenu.classList.toggle("hidden");
             });
-
+    
             // Hide dropdown when clicking outside
             document.addEventListener("click", function (event) {
                 if (!moreBtn.contains(event.target) && !dropdownMenu.contains(event.target)) {
                     dropdownMenu.classList.add("hidden");
                 }
             });
-
+    
             // Handle category selection from dropdown
             dropdownItems.forEach(item => {
                 item.addEventListener("click", function () {
@@ -607,113 +721,73 @@
                     dropdownMenu.classList.add("hidden");
                 });
             });
-
+    
             // Function to filter projects based on category
             function filterProjects(category) {
-                const postersSection = document.getElementById("posters-section");
-                const bannersSection = document.getElementById("banners-section");
-                const digitalartsSection = document.getElementById("digital-art-section");
-                const manipulationsSection = document.getElementById("manipulations-section");
-                const retouchesSection = document.getElementById("retouches-section");
-                const brochuresSection = document.getElementById("brochures-section");
-                const productsSection = document.getElementById("products-section");
-                const logosSection = document.getElementById("logos-section");
-                const othersSection = document.getElementById("others-section");
-
-                // Show or hide sections based on category
-                if (category === "all") {
-                    postersSection.style.display = "block";
-                    bannersSection.style.display = "block";
-                } else if (category === "posters") {
-                    postersSection.style.display = "block";
-                    bannersSection.style.display = "none";
-                } else if (category === "banners") {
-                    postersSection.style.display = "none";
-                    bannersSection.style.display = "block";
-                } else {
-                    postersSection.style.display = "none";
-                    bannersSection.style.display = "none";
-                }
-
-                // Filter projects within the visible section
-                document.querySelectorAll(".project").forEach(project => {
-                    if (category === "all" || project.getAttribute("data-category") === category) {
-                        project.style.display = "block";
-                    } else {
-                        project.style.display = "none";
-                    }
+                const sections = [
+                    "posters-section",
+                    "banners-section",
+                    "digital-art-section",
+                    "manipulations-section",
+                    "retouches-section",
+                    "brochures-section",
+                    "products-section",
+                    "logos-section",
+                    "others-section"
+                ];
+    
+                sections.forEach(section => {
+                    document.getElementById(section).style.display = (category === "all" || section.includes(category)) ? "block" : "none";
                 });
             }
-
+    
             // Search functionality
             document.getElementById("search-input").addEventListener("input", function () {
                 const query = this.value.toLowerCase();
-                const postersSection = document.getElementById("posters-section");
-                const bannersSection = document.getElementById("banners-section");
-                const digitalartsSection = document.getElementById("digital-art-section");
-                const manipulationsSection = document.getElementById("manipulations-section");
-                const retouchesSection = document.getElementById("retouches-section");
-                const brochuresSection = document.getElementById("brochures-section");
-                const productsSection = document.getElementById("products-section");
-                const logosSection = document.getElementById("logos-section");
-                const othersSection = document.getElementById("others-section");
-
-                // Default to showing both sections
-                postersSection.style.display = "block";
-                bannersSection.style.display = "block";
-
-                // Check if query matches "poster" or "banner"
-                if (query.includes("poster")) {
-                    postersSection.style.display = "block";
-                    bannersSection.style.display = "none";  // Hide banner section
-                } else if (query.includes("banner")) {
-                    postersSection.style.display = "none";  // Hide poster section
-                    bannersSection.style.display = "block";
-                } else if (query.includes("digitalarts")) {
-                    postersSection.style.display = "none";  // Hide poster section
-                    bannersSection.style.display = "block";
-                } else if (query.includes("manipulations")) {
-                    postersSection.style.display = "none";  // Hide poster section
-                    bannersSection.style.display = "block";
-                } else if (query.includes("retouches")) {
-                    postersSection.style.display = "none";  // Hide poster section
-                    bannersSection.style.display = "block";
-                } else if (query.includes("brochures")) {
-                    postersSection.style.display = "none";  // Hide poster section
-                    bannersSection.style.display = "block";
-                } else if (query.includes("products")) {
-                    postersSection.style.display = "none";  // Hide poster section
-                    bannersSection.style.display = "block";
-                } else if (query.includes("logos")) {
-                    postersSection.style.display = "none";  // Hide poster section
-                    bannersSection.style.display = "block";
-                } else if (query.includes("others")) {
-                    postersSection.style.display = "none";  // Hide poster section
-                    bannersSection.style.display = "block";
-                } else {
-                    // If neither "poster" nor "banner", show both sections
-                    postersSection.style.display = "block";
-                    bannersSection.style.display = "block";
-                }
-
-                // Filter projects by title (if necessary)
-                document.querySelectorAll(".project").forEach(project => {
-                    const title = project.querySelector("img").alt.toLowerCase();
-                    // Show or hide projects based on whether their title matches the query
-                    if (title.includes(query)) {
-                        project.style.display = "block"; // Show matching projects
-                    } else {
-                        project.style.display = "block"; // Keep projects visible, but you can remove this line if you want them hidden
-                    }
+                const sections = [
+                    "posters-section",
+                    "banners-section",
+                    "digital-art-section",
+                    "manipulations-section",
+                    "retouches-section",
+                    "brochures-section",
+                    "products-section",
+                    "logos-section",
+                    "others-section"
+                ];
+    
+                // Hide all sections initially
+                sections.forEach(section => {
+                    document.getElementById(section).style.display = "none";
                 });
+    
+                // Show the relevant section based on the query
+                if (query.includes("poster")) {
+                    document.getElementById("posters-section").style.display = "block";
+                } else if (query.includes("banner")) {
+                    document.getElementById("banners-section").style.display = "block";
+                } else if (query.includes("digital art")) {
+                    document.getElementById("digital-art-section").style.display = "block";
+                } else if (query.includes("manipulation")) {
+                    document.getElementById("manipulations-section").style.display = "block";
+                } else if (query.includes("retouch")) {
+                    document.getElementById("retouches-section").style.display = "block";
+                } else if (query.includes("brochure")) {
+                    document.getElementById("brochures-section").style.display = "block";
+                } else if (query.includes("product")) {
+                    document.getElementById("products-section").style.display = "block";
+                } else if (query.includes("logo")) {
+                    document.getElementById("logos-section").style.display = "block";
+                } else if (query.includes("other")) {
+                    document.getElementById("others-section").style.display = "block";
+                }
             });
-
         });
     </script>
 
-
     <!-- link to custom js  -->
     <script src="script.js"></script>
+    
     <!-- fontawsome js  -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
