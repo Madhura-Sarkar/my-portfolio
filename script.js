@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelector('.nav-link[href="projects.html"]').classList.add('active');
     }
 
+    // Add scroll event listener for highlighting active section
     window.addEventListener('scroll', () => {
         let currentDiv = '';
 
@@ -96,8 +97,8 @@ typeLine(paragraphs[currentLine]);
 
 // aptitude script
 document.querySelectorAll('.skill').forEach(skill => {
-    skill.classList.add('px-4', 'py-2', 'text-sm', 'font-semibold', 'text-white', 'bg-gray-700', 
-        'border-2', 'border-indigo-400', 'rounded-full', 'shadow-md', 'cursor-pointer', 
+    skill.classList.add('px-4', 'py-2', 'text-sm', 'font-semibold', 'text-white', 'bg-gray-700',
+        'border-2', 'border-indigo-400', 'rounded-full', 'shadow-md', 'cursor-pointer',
         'transition-all', 'duration-300');
 
     skill.addEventListener('mouseenter', () => {
@@ -126,4 +127,3 @@ toggleButton.addEventListener('click', () => {
     hiddenFaqItems.forEach(item => item.classList.toggle('hidden'));
     toggleButton.textContent = hiddenFaqItems[0].classList.contains('hidden') ? 'Show More' : 'Show Less';
 });
-
