@@ -15,10 +15,9 @@ Welcome to my portfolio! This repository contains the code and resources for my 
 
 ## 🌟 Technologies Used 🌟
 - HTML
-- CSS
+- CSS (Tailwind)
 - JavaScript
-- React (if applicable)
-- Other libraries or frameworks you used
+
 
 # 🌟 Welcome to My Portfolio 🌟
 
