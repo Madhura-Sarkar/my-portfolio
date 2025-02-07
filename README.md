@@ -44,7 +44,7 @@ I'm currently pursuing a **BCA** degree from **Narula Institute of Technology**,
 - **Skills**: Graphic Design, UX/UI Design, Web Development
 
 ## 📈 Projects
-I’ve worked on several exciting projects. Check out my **Projects** section to explore my designs and web developments!
+I’ve worked on several exciting projects. Check out my **repositories** section to explore my designs and web developments!
 
 ## 🏆 Education & Certifications
 - **BCA** (2022–2025) - Narula Institute of Technology, Kolkata
