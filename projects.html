@@ -29,6 +29,7 @@
                     <li><a href="index.html#about" class="nav-link hover:text-[#ffffff] transition">About</a></li>
                     <li class="active" aria-current="page"><a href="projects.html" class="nav-link">Projects</a>
                     </li>
+                    <li><a href="feed.html" class="nav-link hover:text-[#ffffff] transition">Feed</a></li>
                     <li><a href="index.html#contact" class="nav-link hover:text-[#ffffff] transition">Contact</a></li>
                 </ul>
 
@@ -41,13 +42,16 @@
             <!-- Mobile Menu -->
             <ul id="mobile-menu" class="md:hidden hidden mt-4 space-y-2 text-center text-brown-900 font-semibold">
                 <li>
-                    <a  href="index.html#home" class="nav-link transition">Home</a>
+                    <a href="index.html#home" class="nav-link transition">Home</a>
                 </li>
                 <li>
                     <a href="index.html#about" class="nav-link transition">About</a>
                 </li>
                 <li class="active" aria-current="page">
                     <a href="projects.html" class="nav-link transition">Projects</a>
+                </li>
+                <li>
+                    <a href="feed.html" class="nav-link transition">Feed</a>
                 </li>
                 <li>
                     <a href="index.html#contact" class="nav-link transition">Contact</a>
@@ -60,6 +64,53 @@
         <div class="flex flex-col items-center justify-center mb-10">
             <div class="img-container"> <img src="assets/projects.png" alt="projects" class="h-60 w-70"></div>
         </div>
+
+        <div class="m-12">
+            <div class="grid grid-cols-5 gap-6">
+
+                <button type="button" class="button">
+                    <div class="button-top">
+                        <a href="projects.html">Graphic Design</a>
+                    </div>
+                    <div class="button-bottom"></div>
+                    <div class="button-base"></div>
+                </button>
+
+                <button type="button" class="button">
+                    <div class="button-top">
+                        <a href="webdesign.html">Web Design</a>
+                    </div>
+                    <div class="button-bottom"></div>
+                    <div class="button-base"></div>
+                </button>
+
+                <button type="button" class="button">
+                    <div class="button-top">
+                        <a href="https://www.pixilart.com/codepetal/photos">Pixel Art</a>
+                    </div>
+                    <div class="button-bottom"></div>
+                    <div class="button-base"></div>
+                </button>
+
+                <button type="button" class="button">
+                    <div class="button-top">
+                        <a href="feed.html">UX/UI</a>
+                    </div>
+                    <div class="button-bottom"></div>
+                    <div class="button-base"></div>
+                </button>
+
+                <button type="button" class="button">
+                    <div class="button-top">
+                        <a href="projects.html">Illustration</a>
+                    </div>
+                    <div class="button-bottom"></div>
+                    <div class="button-base"></div>
+                </button>
+
+            </div>
+        </div>
+
 
         <!-- Search Bar -->
         <div class="flex justify-center mb-6">
@@ -467,20 +518,20 @@
         </div>
 
         <!-- Magazine Section -->
-<!--         <div id="magazines-section" class="mb-10"> -->
-<!--             <h1 class="text-3xl font-serif text-white">✦ Magazines ✦</h1> -->
+        <!--         <div id="magazines-section" class="mb-10"> -->
+        <!--             <h1 class="text-3xl font-serif text-white">✦ Magazines ✦</h1> -->
 
-<!--             <div id="projects-container" -->
-<!--                 class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6 relative mt-10"> -->
+        <!--             <div id="projects-container" -->
+        <!--                 class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6 relative mt-10"> -->
 
-                <!-- Project 1-a -->
-<!--                 <div class="relative group project" data-category="products"> -->
-<!--                     <iframe src="https://player.flipsnack.com?hash=RkY1NTY5NzdDNkYrMTlldnNsOGNqbA==" width="100%" height="480" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen allow="autoplay; clipboard-read; clipboard-write"></iframe> -->
-<!--                 </div> -->
+        <!-- Project 1-a -->
+        <!--                 <div class="relative group project" data-category="products"> -->
+        <!--                     <iframe src="https://player.flipsnack.com?hash=RkY1NTY5NzdDNkYrMTlldnNsOGNqbA==" width="100%" height="480" seamless="seamless" scrolling="no" frameBorder="0" allowFullScreen allow="autoplay; clipboard-read; clipboard-write"></iframe> -->
+        <!--                 </div> -->
 
-                <!-- more projects  -->
-<!--             </div> -->
-<!--         </div> -->
+        <!-- more projects  -->
+        <!--             </div> -->
+        <!--         </div> -->
 
         <!-- Logo Section -->
         <div id="logos-section" class="mb-10">
@@ -690,45 +741,45 @@
             const modalDescription = document.getElementById("modal-description");
             const modalImages = document.getElementById("modal-images");
             const closeModal = document.getElementById("close-modal");
-    
+
             document.querySelectorAll(".open-modal").forEach(button => {
                 button.addEventListener("click", function () {
                     modalTitle.innerText = this.getAttribute("data-title");
                     modalDescription.innerText = this.getAttribute("data-description");
-    
+
                     const images = this.getAttribute("data-images").split(",");
                     modalImages.innerHTML = images.map(img => `<img src="${img}" class="rounded-lg w-full">`).join("");
-    
+
                     modal.classList.remove("hidden");
                 });
             });
-    
+
             closeModal.addEventListener("click", function () {
                 modal.classList.add("hidden");
             });
-    
+
             modal.addEventListener("click", function (event) {
                 if (event.target === modal) {
                     modal.classList.add("hidden");
                 }
             });
-    
+
             const moreBtn = document.getElementById("more-btn");
             const dropdownMenu = document.getElementById("dropdown-menu");
             const dropdownItems = document.querySelectorAll(".dropdown-item");
-    
+
             // Toggle dropdown on click
             moreBtn.addEventListener("click", function () {
                 dropdownMenu.classList.toggle("hidden");
             });
-    
+
             // Hide dropdown when clicking outside
             document.addEventListener("click", function (event) {
                 if (!moreBtn.contains(event.target) && !dropdownMenu.contains(event.target)) {
                     dropdownMenu.classList.add("hidden");
                 }
             });
-    
+
             // Handle category selection from dropdown
             dropdownItems.forEach(item => {
                 item.addEventListener("click", function () {
@@ -737,7 +788,7 @@
                     dropdownMenu.classList.add("hidden");
                 });
             });
-    
+
             // Function to filter projects based on category
             function filterProjects(category) {
                 const sections = [
@@ -751,12 +802,12 @@
                     "logos-section",
                     "others-section"
                 ];
-    
+
                 sections.forEach(section => {
                     document.getElementById(section).style.display = (category === "all" || section.includes(category)) ? "block" : "none";
                 });
             }
-    
+
             // Search functionality
             document.getElementById("search-input").addEventListener("input", function () {
                 const query = this.value.toLowerCase();
@@ -771,12 +822,12 @@
                     "logos-section",
                     "others-section"
                 ];
-    
+
                 // Hide all sections initially
                 sections.forEach(section => {
                     document.getElementById(section).style.display = "none";
                 });
-    
+
                 // Show the relevant section based on the query
                 if (query.includes("poster")) {
                     document.getElementById("posters-section").style.display = "block";
@@ -803,7 +854,7 @@
 
     <!-- link to custom js  -->
     <script src="script.js"></script>
-    
+
     <!-- fontawsome js  -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
