@@ -1,5 +1,5 @@
 # My-Portfolio
-# https://webstudy2024.netlify.app/
+# https://codepetal.netlify.app/
 
 <p align="center">
   <img src="https://media1.tenor.com/m/dsQqZgrl9EQAAAAC/cool-alien.gif" alt="Cat GIF" style="width:100%; height:auto;">
