@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Mockup Scroll</title>
+
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-[#0f0f0f] text-white font-sans">
+
+<section class="py-24 relative overflow-hidden">
+
+  <!-- background glow -->
+  <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[650px] h-[650px]
+      bg-[#4f46e5]/20 blur-[150px] rounded-full">
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 relative z-10">
+
+    <!-- heading -->
+    <div class="text-center mb-16">
+      <p class="text-sm uppercase tracking-widest text-[#9994f0] mb-2">
+        Selected Work
+      </p>
+
+      <h2 class="text-3xl md:text-4xl font-semibold">
+        Featured Projects
+      </h2>
+
+      <p class="mt-4 text-gray-400 max-w-xl mx-auto">
+        A curated selection of web & UI projects.
+      </p>
+    </div>
+
+    <!-- Projects grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 justify-items-center">
+
+      <!-- PROJECT CARD -->
+      <div class="group">
+        <div
+          class="relative max-w-[340px] rounded-2xl p-[1px] 
+          bg-gradient-to-b from-[#9994f0] via-[#4f46e5] to-[#3b82f6]
+          group-hover:from-pink-500 group-hover:to-purple-500
+          transition-all duration-500">
+
+          <div class="bg-[#0f0f0f] rounded-2xl p-3 shadow-xl">
+            <div class="h-[520px] overflow-hidden rounded-xl mockup-screen">
+              <img
+                src="assets/fashion.jpg"
+                alt="Fashion Website"
+                class="w-full transition-transform duration-[4000ms] ease-linear"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-5 text-center">
+          <h3 class="text-lg font-medium">
+            Fashion Website
+          </h3>
+          <p class="text-sm text-gray-400">
+            UI Design · Frontend
+          </p>
+        </div>
+      </div>
+
+      <!-- PROJECT CARD -->
+      <div class="group">
+        <div
+          class="relative max-w-[340px] rounded-2xl p-[1px] 
+          bg-gradient-to-b from-[#9994f0] via-[#4f46e5] to-[#3b82f6]
+          group-hover:from-pink-500 group-hover:to-purple-500
+          transition-all duration-500">
+
+          <div class="bg-[#0f0f0f] rounded-2xl p-3 shadow-xl">
+            <div class="h-[520px] overflow-hidden rounded-xl mockup-screen">
+              <img
+                src="assets/Shakes.jpg"
+                alt="Milk Shakes"
+                class="w-full transition-transform duration-[4000ms] ease-linear"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-5 text-center">
+          <h3 class="text-lg font-medium">
+            Milk Shakes
+          </h3>
+          <p class="text-sm text-gray-400">
+            Branding · Web Design
+          </p>
+        </div>
+      </div>
+
+      <!-- PROJECT CARD -->
+      <div class="group">
+        <div
+          class="relative max-w-[340px] rounded-2xl p-[1px] 
+          bg-gradient-to-b from-[#9994f0] via-[#4f46e5] to-[#3b82f6]
+          group-hover:from-pink-500 group-hover:to-purple-500
+          transition-all duration-500">
+
+          <div class="bg-[#0f0f0f] rounded-2xl p-3 shadow-xl">
+            <div class="h-[520px] overflow-hidden rounded-xl mockup-screen">
+              <img
+                src="assets/Coffee.jpg"
+                alt="Coffee Shop"
+                class="w-full transition-transform duration-[4000ms] ease-linear"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-5 text-center">
+          <h3 class="text-lg font-medium">
+            Coffee Shop
+          </h3>
+          <p class="text-sm text-gray-400">
+            UI Design · Landing Page
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script>
+document.querySelectorAll('.mockup-screen').forEach(screen => {
+  const img = screen.querySelector('img');
+
+  screen.addEventListener('mouseenter', () => {
+    const scrollAmount = img.clientHeight - screen.clientHeight;
+    img.style.transform = `translateY(-${scrollAmount}px)`;
+  });
+
+  screen.addEventListener('mouseleave', () => {
+    img.style.transform = 'translateY(0)';
+  });
+});
+</script>
+
+</body>
+</html>
