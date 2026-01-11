@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- link to custom stylesheet  -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- font awesome css  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Tailwind CSS CDN (Updated to v3 for better support) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        /* Masonry grid */
+        .masonry {
+            column-count: 3;
+            column-gap: 1rem;
+        }
+
+        .item {
+            break-inside: avoid;
+            margin-bottom: 1rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        .item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .item {
+            opacity: 0;
+            transform: translateY(100px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    </style>
+</head>
+
+<body class="bg-[#111827ff] h-screen">
+
+    <!-- Navbar Section -->
+    <header class="p-4 text-white fixed top-0 left-0 w-full z-10 bg-[#081124]">
+        <nav class="py-1 px-2 sm:px-6 md:px-8 lg:px-12">
+            <div class="container mx-auto flex justify-between items-center">
+                <!-- Centered Navbar for Larger Screens -->
+                <ul class="hidden md:flex justify-center space-x-12 text-brown-900 font-bold w-full">
+                    <li><a href="index.html#home" class="nav-link hover:text-[#ffffff] transition">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link hover:text-[#ffffff] transition">About</a></li>
+                    <li><a href="projects.html" class="nav-link hover:text-[#ffffff] transition">Projects</a></li>
+                    <li class="active" aria-current="page"><a href="feed.html" class="nav-link">Feed</a>
+                    </li>
+                    <li><a href="index.html#contact" class="nav-link hover:text-[#ffffff] transition">Contact</a></li>
+                </ul>
+
+                <!-- Hamburger Menu for Small Screens (Right Aligned) -->
+                <button class="block md:hidden text-brown-900 ml-auto" id="menu-toggle">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <ul id="mobile-menu" class="md:hidden hidden mt-4 space-y-2 text-center text-brown-900 font-semibold">
+                <li>
+                    <a  href="index.html#home" class="nav-link transition">Home</a>
+                </li>
+                <li>
+                    <a href="index.html#about" class="nav-link transition">About</a>
+                </li>
+                <li>
+                    <a  href="projects.html" class="nav-link transition">Projects</a>
+                </li>
+                <li class="active" aria-current="page">
+                    <a href="feed.html" class="nav-link transition">Feed</a>
+                </li>
+                <li>
+                    <a href="index.html#contact" class="nav-link transition">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1 class="text-4xl font-bold mb-8 text-white text-center" style="margin-top: 100px;">My Feed</h1>
+
+
+    <div class="masonry" id="portfolio">
+        <!-- Project Cards -->
+        <div class="item rounded-xl overflow-hidden shadow-lg">
+            <img src="https://i.pinimg.com/736x/5a/c4/ae/5ac4ae81dd0a7f03958bbf5809eec45f.jpg" alt="Project 1"
+                class="w-full object-cover rounded-xl">
+        </div>
+        <div class="item rounded-xl overflow-hidden shadow-lg">
+            <img src="https://i.pinimg.com/736x/7c/7a/6f/7c7a6f32cb485110fa20a53d4d1f3783.jpg" alt="Project 2"
+                class="w-full object-cover rounded-xl">
+        </div>
+        <div class="item rounded-xl overflow-hidden shadow-lg">
+            <img src="https://i.pinimg.com/736x/e9/cd/07/e9cd071bf6a94ae1e9e689ed8e7823bf.jpg" alt="Project 2"
+                class="w-full object-cover rounded-xl">
+        </div>
+        <div class="item rounded-xl overflow-hidden shadow-lg">
+            <img src="https://i.pinimg.com/736x/2f/1b/e0/2f1be0995eb62bc056fa362d6315b438.jpg" alt="Project 2"
+                class="w-full object-cover rounded-xl">
+        </div>
+        <div class="item rounded-xl overflow-hidden shadow-lg">
+            <img src="https://i.pinimg.com/736x/ae/1d/75/ae1d75890e8ac6c441d0b1827e4b109d.jpg" alt="Project 2"
+                class="w-full object-cover rounded-xl">
+        </div>
+        <div class="item rounded-xl overflow-hidden shadow-lg">
+            <img src="https://i.pinimg.com/736x/62/b5/92/62b59254d8ea5d3e01dc599fe6c15a01.jpg" alt="Project 2"
+                class="w-full object-cover rounded-xl">
+        </div>
+        <div class="item rounded-xl overflow-hidden shadow-lg">
+            <img src="https://i.pinimg.com/736x/fe/bb/d7/febbd72690e86d65e4ccd27fa4568dca.jpg" alt="Project 2"
+                class="w-full object-cover rounded-xl">
+        </div>
+        <!-- Add more items here -->
+    </div>
+
+    <!-- link to custom js  -->
+    <script src="script.js"></script>
+    <!-- fontawsome js  -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+    <script>
+        const items = document.querySelectorAll('.item');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        items.forEach(item => {
+            observer.observe(item);
+        });
+    </script>
+
+    <!-- JavaScript to trigger the opacity and transform changes after the page loads. -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll("section");
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+
+</html>
