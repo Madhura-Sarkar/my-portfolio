@@ -15,6 +15,51 @@
 
 <body class="bg-[#0f0f0f] text-white font-sans">
 
+  <!-- Navbar Section -->
+  <header class="p-4 text-white fixed top-0 left-0 w-full z-10 bg-[#081124]">
+    <nav class="py-1 px-2 sm:px-6 md:px-8 lg:px-12">
+      <div class="container mx-auto flex justify-between items-center">
+        <!-- Centered Navbar for Larger Screens -->
+        <ul class="hidden md:flex justify-center space-x-12 text-brown-900 font-bold w-full">
+          <li><a href="index.html" class="nav-link hover:text-[#ffffff] transition">Home</a>
+          </li>
+          <li><a href="#about" class="nav-link hover:text-[#ffffff] transition">About</a></li>
+          <li><a href="projects.html" class="nav-link hover:text-[#ffffff] transition">Projects</a></li>
+          <li class="active" aria-current="page"><a href="webdesign.html" class="nav-link active">WebDesigns</a></li>
+          <li><a href="feed.html" class="nav-link hover:text-[#ffffff] transition">Feed</a></li>
+          <li><a href="#contact" class="nav-link hover:text-[#ffffff] transition">Contact</a></li>
+        </ul>
+
+        <!-- Hamburger Menu for Small Screens (Right Aligned) -->
+        <button class="block md:hidden text-brown-900 ml-auto" id="menu-toggle">
+          <i class="fas fa-bars fa-lg"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <ul id="mobile-menu" class="md:hidden hidden mt-4 space-y-2 text-center text-brown-900 font-semibold">
+        <li>
+          <a href="#home" class="nav-link transition">Home</a>
+        </li>
+        <li>
+          <a href="#about" class="nav-link transition">About</a>
+        </li>
+        <li>
+          <a href="projects.html" class="nav-link transition">Projects</a>
+        </li>
+        <li class="active" aria-current="page">
+          <a href="webdesign.html" class="nav-link transition">WebDesigns</a>
+        </li>
+        <li>
+          <a href="feed.html" class="nav-link transition">Feed</a>
+        </li>
+        <li>
+          <a href="#contact" class="nav-link transition">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
   <section class="py-24 relative overflow-hidden">
 
     <!-- background glow -->
@@ -26,13 +71,6 @@
 
     <div class="max-w-7xl mx-auto px-4 relative z-10">
 
-      <button type="button" class="button">
-        <div class="button-top">
-          <a href="index.html">Back to Home</a>
-        </div>
-        <div class="button-bottom"></div>
-        <div class="button-base"></div>
-      </button>
 
       <!-- Back to Top Button -->
       <button id="backToTop" class="fixed bottom-6 right-6 z-50 hidden
@@ -160,6 +198,16 @@
       </div>
     </div>
   </section>
+
+  <div class="max-w-7xl mx-auto px-4 relative z-10">
+    <button type="button" class="button">
+      <div class="button-top">
+        <a href="index.html">Back to Home</a>
+      </div>
+      <div class="button-bottom"></div>
+      <div class="button-base"></div>
+    </button>
+  </div>
 
 
   <script>
